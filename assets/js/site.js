@@ -58,4 +58,17 @@
   if(tb){tb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
     tb.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b);});
     var t=b.getAttribute('data-topic');cards.forEach(function(c){c.hidden=!(t==='all'||c.getAttribute('data-topic')===t);c.classList.add('in');});});}
+  // Custom cursor: a black dot that follows the mouse (desktop only)
+  var fine=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if(fine){
+    var dot=document.createElement('div'); dot.className='cursor-dot'; dot.setAttribute('aria-hidden','true'); document.body.appendChild(dot);
+    document.documentElement.classList.add('has-dot');
+    var tx=-100,ty=-100,x=-100,y=-100,shown=false;
+    window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;if(!shown){x=tx;y=ty;shown=true;dot.classList.add('on');}},{passive:true});
+    document.addEventListener('mouseleave',function(){dot.classList.remove('on');shown=false;});
+    document.addEventListener('mouseover',function(e){dot.classList.toggle('big',!!e.target.closest('a,button,summary,.wk-card,.bl-card'));});
+    document.addEventListener('mousedown',function(){dot.classList.add('press');});
+    document.addEventListener('mouseup',function(){dot.classList.remove('press');});
+    (function loop(){var k=reduce?1:.22;x+=(tx-x)*k;y+=(ty-y)*k;dot.style.transform='translate3d('+x+'px,'+y+'px,0) translate(-50%,-50%)';requestAnimationFrame(loop);})();
+  }
 })();

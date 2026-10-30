@@ -447,4 +447,11 @@
 @media (max-width:1180px){#top.sbh .bl-pen{right:0;opacity:.35}}
 @media (max-width:900px){#top.sbh .bl-pen{display:none}#top.sbh .bl-grid{grid-template-columns:1fr}#top.sbh .bl-intro .lede{font-size:18px}}
 
+/* ===================== CURSOR DOT ===================== */
+.cursor-dot{position:fixed;left:0;top:0;width:22px;height:22px;border-radius:50%;background:#1A1A1A;pointer-events:none;z-index:9999;opacity:0;transition:opacity .25s,width .25s ease,height .25s ease,background .25s;will-change:transform}
+.cursor-dot.on{opacity:1}
+.cursor-dot.big{width:52px;height:52px;background:transparent;box-shadow:inset 0 0 0 1.5px #1A1A1A}
+.cursor-dot.press{width:14px;height:14px}
+html.has-dot,html.has-dot *{cursor:none !important}
+
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
