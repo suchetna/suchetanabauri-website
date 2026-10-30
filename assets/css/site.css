@@ -404,8 +404,12 @@
 #top.sbh .wk-head{background:var(--card);border-radius:20px;padding:28px 32px 34px;text-align:center;-webkit-mask-image:linear-gradient(180deg,#000 80%,rgba(0,0,0,.35));mask-image:linear-gradient(180deg,#000 80%,rgba(0,0,0,.35))}
 #top.sbh .wk-h1{font-size:clamp(40px,4.4vw,60px);font-weight:500;line-height:1.25;letter-spacing:-.02em;margin-top:14px}
 #top.sbh .wk-head .lede{max-width:640px;margin:8px auto 0;font-size:20px}
-#top.sbh .wk-clients{font-size:13px;color:#999;margin-top:30px;line-height:1.6}
-#top.sbh .wk-clients span{color:var(--label);margin-right:18px}
+#top.sbh .wk-clients{display:flex;align-items:center;gap:20px;max-width:720px;margin:30px auto 0;font-size:13px;line-height:20px}
+#top.sbh .wk-cl-label{color:var(--label);white-space:nowrap;flex:none}
+#top.sbh .wk-cl-marq{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+#top.sbh .wk-cl-track{display:flex;gap:28px;width:max-content;animation:sbh-marq 32s linear infinite}
+#top.sbh .wk-cl-track span{color:#999;white-space:nowrap}
+#top.sbh .wk-head:hover .wk-cl-track{animation-play-state:paused}
 #top.sbh .wk-grid-sec{padding-top:40px}
 #top.sbh .wk-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px 20px}
 #top.sbh .wk-tag{display:inline-block;background:var(--chip);color:var(--label);font-size:13px;line-height:1;padding:9px 12px;border-radius:8px}
@@ -415,6 +419,7 @@
 #top.sbh .wk-card h2{font-size:24px;font-weight:500;line-height:1.33;letter-spacing:-.02em;margin-top:16px}
 #top.sbh .wk-card p{font-size:16px;color:var(--label);line-height:1.5;margin-top:4px}
 #top.sbh .wk-card small{display:block;font-size:13px;color:#888;line-height:1.55;margin-top:6px}
+@media (max-width:640px){#top.sbh .wk-clients{flex-direction:column;gap:8px}#top.sbh .wk-cl-marq{width:100%}}
 @media (max-width:900px){#top.sbh .wk-grid{grid-template-columns:1fr;gap:56px}#top.sbh .wk-head .lede{font-size:18px}}
 
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
