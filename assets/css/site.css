@@ -547,7 +547,7 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh .a-nudge{animation:svNudge 2.6s ease-in-out infinite}
 #top.sbh .a-tick{animation:svTick 4s ease-in-out infinite}
 #top.sbh .sv-ico .a-travel{stroke-width:3;stroke-dasharray:.12 .88!important;animation:svTravel 4s linear infinite}
-#top.sbh .sv-row:hover .sv-ico g,#top.sbh .sv-inc li:hover .sv-ico g{animation-duration:3s}
+#top.sbh .sv-row:hover .sv-ico g{animation-duration:3s}
 @keyframes svSpin{to{transform:rotate(360deg)}}
 @keyframes svBreathe{50%{transform:scale(.86)}}
 @keyframes svRipple{0%{transform:scale(.6);opacity:1}100%{transform:scale(2.3);opacity:0}}
@@ -555,8 +555,6 @@ html.has-dot,html.has-dot *{cursor:none !important}
 @keyframes svNudge{50%{transform:translate(3px,3px)}}
 @keyframes svTick{0%,15%{stroke-dashoffset:1}45%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-1}}
 @keyframes svTravel{to{stroke-dashoffset:-1}}
-#top.sbh .sv-inc li{align-items:center}
-#top.sbh .sv-inc li .sv-ico{width:34px;height:34px;flex:none;stroke-width:1.8;margin:0;padding:0;background:none;border-radius:0}
 @media (max-width:900px){#top.sbh .sv-row{grid-template-columns:48px 1fr;gap:16px 20px;padding:28px 0 44px}#top.sbh .sv-ico{width:44px;height:44px}#top.sbh .sv-lab{text-align:left;padding-top:4px}#top.sbh .sv-txt{grid-column:1/-1}}
 @media (prefers-reduced-motion:reduce){#top.sbh .sv-ico *{animation:none!important;transition:none!important}}
 
