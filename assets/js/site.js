@@ -9,16 +9,26 @@
     els.forEach(function(el){io.observe(el);});
   } else { els.forEach(function(el){el.classList.add('in');}); }
 
-  // "A bit about me": words darken as you scroll
+  // Words darken as you scroll (any element with data-words; keeps <em>, <br> etc.)
   root.querySelectorAll('[data-words]').forEach(function(p){
-    var words=p.textContent.trim().split(/\s+/);
-    p.innerHTML=words.map(function(w){return '<span class="w">'+w+'</span> ';}).join('');
+    var walk=document.createTreeWalker(p,NodeFilter.SHOW_TEXT),nodes=[],n;
+    while((n=walk.nextNode()))nodes.push(n);
+    nodes.forEach(function(t){
+      if(!t.nodeValue.trim())return;
+      var f=document.createDocumentFragment();
+      t.nodeValue.split(/(\s+)/).forEach(function(w){
+        if(!w)return;
+        if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(w));return;}
+        var s=document.createElement('span');s.className='w';s.textContent=w;f.appendChild(s);
+      });
+      t.parentNode.replaceChild(f,t);
+    });
     var spans=p.querySelectorAll('.w');
     var paint=function(){
       var r=p.getBoundingClientRect(), vh=window.innerHeight;
       var prog=reduce?1:Math.min(1,Math.max(0,(vh*0.85-r.top)/(r.height+vh*0.35)));
-      var n=Math.round(prog*spans.length);
-      spans.forEach(function(s,i){s.classList.toggle('on',i<n);});
+      var k=Math.round(prog*spans.length);
+      spans.forEach(function(s,i){s.classList.toggle('on',i<k);});
     };
     window.addEventListener('scroll',paint,{passive:true}); window.addEventListener('resize',paint); paint();
   });
