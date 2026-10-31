@@ -575,4 +575,22 @@ html.has-dot,html.has-dot *{cursor:none !important}
 @keyframes svNx2{50%{transform:translateX(-4px)}}
 @media (max-width:640px){#top.sbh .sv-hero-grid .sv-h1.one{font-size:11.2vw}}
 
+/* Branding icons */
+#top.sbh .a-home{animation:svHome 4s ease-in-out infinite}
+#top.sbh .a-pop circle{animation:svPop 3s ease-in-out infinite}
+#top.sbh .a-pop circle:nth-child(2){animation-delay:.3s}#top.sbh .a-pop circle:nth-child(3){animation-delay:.6s}
+#top.sbh .a-nudge-y{animation:svNy 2.6s ease-in-out infinite}
+#top.sbh .sv-ico .a-type{stroke-dasharray:1;animation:svType 3s ease-in-out infinite}
+#top.sbh .a-flip{transform-origin:24px 24px;animation:svFlip 3.5s ease-in-out infinite}
+#top.sbh .a-walk{animation:svWalk 4s ease-in-out infinite}
+#top.sbh .sv-ico [stroke-dasharray=".06 .04"]{stroke-dasharray:.06 .04!important}
+@keyframes svHome{0%,100%{transform:translate(12px,-10px)}50%{transform:none}}
+@keyframes svPop{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes svNy{50%{transform:translateY(-3px)}}
+@keyframes svType{0%{stroke-dashoffset:1}60%,100%{stroke-dashoffset:0}}
+@keyframes svFlip{0%,100%{transform:scaleX(1)}50%{transform:scaleX(-1)}}
+@keyframes svWalk{0%{transform:none}50%{transform:translate(16px,-12px)}80%,100%{transform:translate(34px,-28px);opacity:0}}
+#top.sbh .sv-hero-grid .sv-h1.one.mid{font-size:clamp(60px,10vw,170px)}
+#top.sbh .a-pop1{animation:svPop 2.4s ease-in-out infinite}
+
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
