@@ -558,4 +558,21 @@ html.has-dot,html.has-dot *{cursor:none !important}
 @media (max-width:900px){#top.sbh .sv-row{grid-template-columns:48px 1fr;gap:16px 20px;padding:28px 0 44px}#top.sbh .sv-ico{width:44px;height:44px}#top.sbh .sv-lab{text-align:left;padding-top:4px}#top.sbh .sv-txt{grid-column:1/-1}}
 @media (prefers-reduced-motion:reduce){#top.sbh .sv-ico *{animation:none!important;transition:none!important}}
 
+/* Communications icons + one-word hero title */
+#top.sbh .sv-hero-grid .sv-h1.one{font-size:clamp(52px,7.4vw,124px);letter-spacing:-.02em}
+#top.sbh .sv-hero-grid .sv-h1.one em{font-size:1.12em}
+#top.sbh .a-swing{animation:svSwing 5s ease-in-out infinite}
+#top.sbh .a-wave1{animation:svWave 2.4s ease-in-out infinite}
+#top.sbh .a-wave2{animation:svWave 2.4s ease-in-out .3s infinite}
+#top.sbh .a-wave3{animation:svWave 2.4s ease-in-out .6s infinite}
+#top.sbh .a-lines{animation:svLines 4s ease-in-out infinite}
+#top.sbh .a-nudge-x{animation:svNx 2.4s ease-in-out infinite}
+#top.sbh .a-nudge-x2{animation:svNx2 2.4s ease-in-out infinite}
+@keyframes svSwing{0%,100%{transform:rotate(-25deg)}50%{transform:rotate(25deg)}}
+@keyframes svWave{0%,100%{opacity:.15}50%{opacity:1}}
+@keyframes svLines{0%,100%{opacity:0;transform:translateY(4px)}40%,70%{opacity:1;transform:none}}
+@keyframes svNx{50%{transform:translateX(4px)}}
+@keyframes svNx2{50%{transform:translateX(-4px)}}
+@media (max-width:640px){#top.sbh .sv-hero-grid .sv-h1.one{font-size:11.2vw}}
+
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
