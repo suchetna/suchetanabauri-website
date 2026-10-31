@@ -77,7 +77,7 @@
     var links=[];for(var a=0;a<N;a++){for(var b=a+1;b<N;b++){var dx=pts[a].x-pts[b].x,dy=pts[a].y-pts[b].y,dz=pts[a].z-pts[b].z;if(dx*dx+dy*dy+dz*dz<0.034)links.push([a,b]);}}
     var W=0,H=0,dpr=Math.min(2,window.devicePixelRatio||1),rotY=0,tiltX=-0.35,tx=0,ty=0,cx=0,cy=0,start=performance.now(),vis=true;
     function size(){var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
-    size();window.addEventListener('resize',size);
+    size();window.addEventListener('resize',size);if('ResizeObserver' in window)new ResizeObserver(size).observe(cv);window.addEventListener('load',size);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(size);
     window.addEventListener('mousemove',function(e){var r=cv.getBoundingClientRect();tx=((e.clientX-r.left)/r.width-.5);ty=((e.clientY-r.top)/r.height-.5);},{passive:true});
     if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;}).observe(cv);
     function frame(now){
@@ -108,7 +108,7 @@
     var dots=[];for(var i=0;i<110;i++){var a=Math.random()*6.283,r=0.16+Math.sqrt(Math.random())*0.82;dots.push({a:a,r:r,s:0.9+Math.random()*1.6,lit:0,hit:-1});}
     var waves=[],replies=[],last=-9,start=performance.now();
     function size(){var b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
-    size();window.addEventListener('resize',size);
+    size();window.addEventListener('resize',size);if('ResizeObserver' in window)new ResizeObserver(size).observe(cv);window.addEventListener('load',size);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(size);
     window.addEventListener('mousemove',function(e){var b=cv.getBoundingClientRect();tx=((e.clientX-b.left)/b.width-.5);ty=((e.clientY-b.top)/b.height-.5);},{passive:true});
     if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;}).observe(cv);
     function frame(now){
