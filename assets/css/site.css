@@ -611,4 +611,16 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh.js .rv.in .sv-ico .a-grow .p{animation:svBar 3s ease-in-out infinite}
 #top.sbh.js .rv.in .sv-ico .a-grow .p:nth-child(2){animation-delay:.25s}#top.sbh.js .rv.in .sv-ico .a-grow .p:nth-child(3){animation-delay:.5s}
 
+/* Digital marketing icons */
+#top.sbh .a-write{animation:svWrite 3s ease-in-out infinite}
+#top.sbh .a-scan{animation:svScan 4s ease-in-out infinite}
+#top.sbh .a-rise{animation:svRise 2.4s ease-in-out infinite}
+#top.sbh .a-flap{transform-origin:24px 13px;animation:svFlap 3.2s ease-in-out infinite}
+#top.sbh .sv-ico [stroke-dasharray=".1 .05"]{stroke-dasharray:.1 .05!important}
+#top.sbh .sv-ico [stroke-dasharray=".1 .06"]{stroke-dasharray:.1 .06!important}
+@keyframes svWrite{0%,100%{transform:translate(-4px,2px)}50%{transform:translate(4px,-1px)}}
+@keyframes svScan{0%,100%{transform:translate(0,0)}25%{transform:translate(6px,2px)}50%{transform:translate(4px,8px)}75%{transform:translate(-2px,5px)}}
+@keyframes svRise{50%{transform:translateY(-4px)}}
+@keyframes svFlap{0%,30%,100%{transform:scaleY(1)}55%,75%{transform:scaleY(-1)}}
+
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
