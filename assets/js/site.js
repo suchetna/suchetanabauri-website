@@ -136,6 +136,44 @@
     }
     requestAnimationFrame(frame);
   });
+
+  // Service hero: scattered dots that gather into clear lines of "text", then loosen (original animation)
+  root.querySelectorAll('canvas[data-clarity]').forEach(function(cv){
+    var ctx=cv.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1),W=0,H=0,vis=true,mx=-9,my=-9,start=performance.now();
+    // target layout: 9 lines of ragged-right text inside the unit square
+    var targets=[],lens=[0.92,0.86,0.95,0.7,0.9,0.82,0.94,0.6,0.38],gap=0.075;
+    lens.forEach(function(L,li){var y=0.2+li*gap,words=[],x=0.14,end=0.14+L*0.8;
+      while(x<end){var w=0.04+Math.random()*0.1;if(x+w>end)w=end-x;if(w>0.015)words.push([x,x+w]);x+=w+0.025;}
+      words.forEach(function(wd){for(var t=wd[0];t<=wd[1];t+=0.011)targets.push([t,y]);});});
+    var pts=targets.map(function(t){return {tx:t[0],ty:t[1],hx:Math.random(),hy:Math.random(),x:Math.random(),y:Math.random(),vx:0,vy:0,ph:Math.random()*6.283,s:0.7+Math.random()*0.9};});
+    function size(){var b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+    size();window.addEventListener('resize',size);if('ResizeObserver' in window)new ResizeObserver(size).observe(cv);window.addEventListener('load',size);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(size);
+    window.addEventListener('mousemove',function(e){var b=cv.getBoundingClientRect();mx=(e.clientX-b.left)/b.width;my=(e.clientY-b.top)/b.height;},{passive:true});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;}).observe(cv);
+    function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;}
+    function frame(now){
+      var t=Math.max(0,(now-start)/1000);
+      if((vis||reduce)&&W>0){
+        // cycle: 0-2.5 scattered, 2.5-4.5 gather, 4.5-9 clear, 9-10.5 loosen
+        var c=(t+1.5)%10.5,k=reduce?1:(c<2.5?0:c<4.5?ease((c-2.5)/2):c<9?1:1-ease((c-9)/1.5));
+        ctx.clearRect(0,0,W,H);
+        pts.forEach(function(p){
+          var nx=p.hx+Math.sin(t*0.5+p.ph)*0.04,ny=p.hy+Math.cos(t*0.4+p.ph*1.3)*0.04;
+          var gx=nx+(p.tx-nx)*k,gy=ny+(p.ty-ny)*k;
+          var dx=p.x-mx,dy=p.y-my,d2=dx*dx+dy*dy;
+          if(d2<0.012&&!reduce){var f=(0.012-d2)*0.9;p.vx+=dx*f*8;p.vy+=dy*f*8;}
+          p.vx+=(gx-p.x)*0.06;p.vy+=(gy-p.y)*0.06;p.vx*=0.78;p.vy*=0.78;
+          if(reduce){p.x=gx;p.y=gy;}else{p.x+=p.vx;p.y+=p.vy;}
+          var a=0.42+0.45*k;ctx.fillStyle='rgba(26,26,26,'+a.toFixed(3)+')';
+          ctx.beginPath();ctx.arc(p.x*W,p.y*H,(p.s*1.2+k*0.5)*(W/480),0,6.283);ctx.fill();
+        });
+        // a cursor-like caret at the end of the last line once text is clear
+        if(k>0.95&&Math.floor(t*1.6)%2===0){var last=targets[targets.length-1];ctx.fillStyle='#1A1A1A';ctx.fillRect(last[0]*W+W*0.02,(last[1]-0.025)*H,W*0.006,H*0.05);}
+      }
+      if(!reduce)requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  });
   // Custom cursor: a black dot that follows the mouse (desktop only)
   var fine=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if(fine){
