@@ -216,46 +216,64 @@
     requestAnimationFrame(frame);
   });
 
-  // Service hero: wireframe blocks that rearrange from web page to app screen to slide (original animation)
-  root.querySelectorAll('canvas[data-layout]').forEach(function(cv){
+  // Service hero: a cluttered slide that tidies itself into one clear message (original animation)
+  root.querySelectorAll('canvas[data-declutter]').forEach(function(cv){
     var ctx=cv.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1),W=0,H=0,vis=true,mx=0,my=0,tx=0,ty=0,start=performance.now();
-    // each layout: frame + 8 blocks [x,y,w,h,fill(0 outline,1 solid,2 light)]
-    var L=[
-      [[.06,.2,.88,.6,0],[.06,.2,.88,.06,2],[.11,.32,.34,.05,1],[.11,.4,.28,.025,2],[.11,.45,.24,.025,2],[.11,.52,.13,.045,1],[.52,.31,.37,.24,2],[.11,.61,.24,.14,0],[.38,.61,.24,.14,0],[.65,.61,.24,.14,0]],
-      [[.33,.07,.34,.86,0],[.33,.07,.34,.05,2],[.37,.16,.26,.2,2],[.37,.39,.2,.035,1],[.37,.45,.24,.02,2],[.37,.49,.2,.02,2],[.37,.83,.26,.05,1],[.37,.55,.26,.11,0],[.37,.68,.26,.11,0],[.37,.68,.26,.11,0]],
-      [[.06,.22,.88,.56,0],[.06,.22,.88,.04,2],[.11,.31,.4,.05,1],[.11,.39,.3,.02,2],[.11,.43,.26,.02,2],[.11,.68,.14,.025,2],[.58,.32,.07,.4,1],[.68,.47,.07,.25,2],[.78,.38,.07,.34,1],[.48,.55,.07,.17,2]]
+    // [type, messy x,y,w,h,rot, clear x,y,w,h, keep]  type: s=solid, l=light, o=outline, t=text line
+    var E=[
+      ['s',.16,.30,.46,.07,-.06, .13,.31,.4,.075,1],
+      ['t',.40,.44,.40,.025,.10, .13,.45,.36,.022,1],
+      ['t',.12,.56,.34,.025,-.12,.13,.5,.3,.022,1],
+      ['s',.55,.52,.24,.20,.14,  .62,.31,.25,.4,1],
+      ['t',.20,.70,.22,.02,.05,  .13,.66,.18,.02,1],
+      ['o',.62,.27,.22,.13,-.2, .6,.3,.2,.1,0],
+      ['l',.24,.40,.26,.18,.18, .24,.4,.2,.12,0],
+      ['o',.10,.62,.18,.12,.25, .1,.62,.12,.1,0],
+      ['t',.50,.66,.30,.02,-.3, .5,.66,.2,.02,0],
+      ['t',.30,.26,.28,.02,.22, .3,.26,.2,.02,0],
+      ['l',.70,.62,.14,.10,-.35, .7,.62,.1,.08,0],
+      ['t',.14,.47,.22,.02,.4, .14,.47,.16,.02,0],
+      ['o',.42,.58,.12,.12,.6, .42,.58,.08,.08,0],
+      ['s',.78,.42,.05,.05,.8, .78,.42,.03,.03,0],
+      ['s',.36,.36,.04,.04,-.5, .36,.36,.03,.03,0]
     ];
-    var cur=L[0].map(function(r){return r.slice();});
     function size(){var b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
     size();window.addEventListener('resize',size);if('ResizeObserver' in window)new ResizeObserver(size).observe(cv);window.addEventListener('load',size);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(size);
     window.addEventListener('mousemove',function(e){var b=cv.getBoundingClientRect();tx=((e.clientX-b.left)/b.width-.5);ty=((e.clientY-b.top)/b.height-.5);},{passive:true});
     if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;}).observe(cv);
-    function rr(x,y,w,h,r){r=Math.min(r,w/2,h/2);ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+    function rr(x,y,w,h,r){r=Math.max(0,Math.min(r,w/2,h/2));ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+    function ease(x){return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;}
     function frame(now){
       var t=Math.max(0,(now-start)/1000);
       if((vis||reduce)&&W>0){
         mx+=(tx-mx)*.05;my+=(ty-my)*.05;
-        var per=4,idx=reduce?0:Math.floor(t/per)%L.length,T=L[idx];
+        // cycle 9s: messy 0-2, tidy 2-4, clear 4-7.6, back 7.6-9
+        var c=(t+.5)%9,k=reduce?1:(c<2?0:c<4?ease((c-2)/2):c<7.6?1:1-ease((c-7.6)/1.4));
         ctx.clearRect(0,0,W,H);
-        cur.forEach(function(r,i){
-          var g=T[i],k=reduce?1:0.07+i*0.006;for(var q=0;q<4;q++)r[q]+=(g[q]-r[q])*k;r[4]=g[4];
-          var depth=i===0?0.02:0.05+i*0.004,x=(r[0]+mx*depth)*W,y=(r[1]+my*depth)*H,w=r[2]*W,h=r[3]*H,rad=i===0?(idx===1?W*0.04:W*0.012):W*0.008;
-          rr(x,y,w,h,rad);
-          if(r[4]===1){ctx.fillStyle='#1A1A1A';ctx.fill();}
-          else if(r[4]===2){ctx.fillStyle='rgba(26,26,26,.12)';ctx.fill();}
-          else{ctx.fillStyle=i===0?'rgba(255,255,255,.35)':'rgba(255,255,255,0)';ctx.fill();ctx.strokeStyle='#1A1A1A';ctx.lineWidth=1.4;ctx.stroke();}
+        // slide frame
+        var fx=.06*W+mx*W*.01,fy=.2*H+my*H*.01,fw=.88*W,fh=.6*H;
+        rr(fx,fy,fw,fh,W*.014);ctx.fillStyle='rgba(255,255,255,.4)';ctx.fill();ctx.strokeStyle='#1A1A1A';ctx.lineWidth=1.4;ctx.stroke();
+        E.forEach(function(e,i){
+          var jitter=reduce?0:(1-k)*Math.sin(t*1.3+i)*.006;
+          var x=e[1]+(e[6]-e[1])*k+jitter,y=e[2]+(e[7]-e[2])*k,w=e[3]+(e[8]-e[3])*k,h=e[4]+(e[9]-e[4])*k,r=e[5]*(1-k);
+          var a=e[10]?1:Math.max(0,1-k*1.6);if(a<=0)return;
+          var dp=.02+i*.002;
+          ctx.save();ctx.globalAlpha=a;ctx.translate((x+w/2+mx*dp)*W,(y+h/2+my*dp)*H);ctx.rotate(r);
+          var X=-w*W/2,Y=-h*H/2,WW=w*W,HH=h*H;
+          if(e[0]==='s'){rr(X,Y,WW,HH,W*.006);ctx.fillStyle='#1A1A1A';ctx.fill();}
+          else if(e[0]==='l'){rr(X,Y,WW,HH,W*.006);ctx.fillStyle='rgba(26,26,26,.13)';ctx.fill();}
+          else if(e[0]==='o'){rr(X,Y,WW,HH,W*.006);ctx.strokeStyle='#1A1A1A';ctx.lineWidth=1.2;ctx.stroke();}
+          else{rr(X,Y,WW,HH,HH/2);ctx.fillStyle='rgba(26,26,26,.28)';ctx.fill();}
+          ctx.restore();
         });
-        // a pointer that visits the main button and clicks
-        var btn=cur[5],bx=(btn[0]+btn[2]*.6+mx*.07)*W,by=(btn[1]+btn[3]*.6+my*.07)*H,ph=(t%per)/per;
-        if(!reduce){var px=bx+(1-Math.min(1,ph*2.2))*W*.18,py=by+(1-Math.min(1,ph*2.2))*H*.12;
-          if(ph>.45&&ph<.8){var cp=(ph-.45)/.35;ctx.strokeStyle='rgba(26,26,26,'+(1-cp).toFixed(2)+')';ctx.lineWidth=1.2;ctx.beginPath();ctx.arc(bx,by,6+cp*22,0,6.283);ctx.stroke();}
-          ctx.fillStyle='#1A1A1A';ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(px+W*.032,py+W*.012);ctx.lineTo(px+W*.016,py+W*.018);ctx.lineTo(px+W*.01,py+W*.034);ctx.closePath();ctx.fill();
-          ctx.strokeStyle='#EBEBEB';ctx.lineWidth=1.2;ctx.stroke();}
+        // once clear: the key block gets a quiet highlight ring
+        if(k>.98&&!reduce){var e3=E[3],p=((c-4)/3.6);ctx.strokeStyle='rgba(26,26,26,'+(.35*(1-p)).toFixed(2)+')';ctx.lineWidth=1;rr((e3[6]-.015+mx*.026)*W,(e3[7]-.02+my*.026)*H,(e3[8]+.03)*W,(e3[9]+.04)*H,W*.012);ctx.stroke();}
       }
       if(!reduce)requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
   });
+
   // Custom cursor: a black dot that follows the mouse (desktop only)
   var fine=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if(fine){
