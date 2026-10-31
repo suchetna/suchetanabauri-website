@@ -590,7 +590,7 @@ html.has-dot,html.has-dot *{cursor:none !important}
 @keyframes svType{0%{stroke-dashoffset:1}60%,100%{stroke-dashoffset:0}}
 @keyframes svFlip{0%,100%{transform:scaleX(1)}50%{transform:scaleX(-1)}}
 @keyframes svWalk{0%{transform:none}50%{transform:translate(16px,-12px)}80%,100%{transform:translate(34px,-28px);opacity:0}}
-#top.sbh .sv-hero-grid .sv-h1.one.mid{font-size:clamp(60px,10vw,170px)}
+#top.sbh .sv-hero-grid .sv-h1.one.xl{font-size:clamp(60px,10vw,170px)}
 #top.sbh .a-pop1{animation:svPop 2.4s ease-in-out infinite}
 
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
