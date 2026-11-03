@@ -10,7 +10,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#EBEBEB">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=41">
+<link rel="stylesheet" href="/assets/css/site.css?v=42">
 </head>
 <body>
 <div class="sbh ar-page" id="top">
@@ -38,8 +38,8 @@
     <p>Now imagine an AI agent doing the preliminary investigation: locating the agreement, comparing the charges, finding the relevant correspondence and preparing a recommendation.</p>
     <p>This is an illustrative scenario, not a prediction of a fully autonomous finance department. Its appeal is more immediate. It addresses a recognisable problem with a potentially verifiable outcome.</p>
     <p>It is also a better starting point for enterprise AI than asking which department could use a digital employee.</p>
-    <p>As 2026 draws to a close, organisations face two competing stories about agents. In one, they are already delivering returns. Anthropic’s 2026 State of AI Agents Report, based on insights from more than 500 technical leaders, reports that 80% of organisations in its research are seeing measurable ROI. That is a vendor-published survey finding, not an independently audited return across all enterprises.<sup><a href="#fn1" id="r1-4116">1</a></sup></p>
-    <p>In the other story, deployment is exposing weaknesses that demonstrations conceal. In May 2026, Gartner predicted that by 2027, 40% of enterprises would demote or decommission autonomous agents because of governance gaps discovered after production incidents. This is a forecast, not a measured failure rate.<sup><a href="#fn2" id="r2-6053">2</a></sup></p>
+    <p>As 2026 draws to a close, organisations face two competing stories about agents. In one, they are already delivering returns. Anthropic’s 2026 State of AI Agents Report, based on insights from more than 500 technical leaders, reports that 80% of organisations in its research are seeing measurable ROI. That is a vendor-published survey finding, not an independently audited return across all enterprises.<sup><a href="#fn1">1</a></sup></p>
+    <p>In the other story, deployment is exposing weaknesses that demonstrations conceal. In May 2026, Gartner predicted that by 2027, 40% of enterprises would demote or decommission autonomous agents because of governance gaps discovered after production incidents. This is a forecast, not a measured failure rate.<sup><a href="#fn2">2</a></sup></p>
     <p>Those stories are not necessarily contradictory. An agent can produce useful work while the process around it remains poorly designed.</p>
     <p>The opportunity for 2027 lies between enthusiasm and retreat: make agents responsible for a bounded contribution to a real workflow, and make people responsible for its outcome.</p>
     <p>A good place to begin is the exception queue.</p>
@@ -56,10 +56,10 @@
     <p>That sounds less spectacular than an autonomous organisation. It is also a more useful basis for an investment decision.</p>
     <h2>What has changed in 2026</h2>
     <p>The important change is not that organisations have suddenly discovered automation. It is that agents are being positioned to participate in longer sequences of work.</p>
-    <p>Anthropic’s 2026 report describes a move beyond single-step automation towards multi-stage workflows spanning teams. Its examples and survey findings suggest that the conversation is no longer confined to whether an assistant can produce a useful first draft.<sup><a href="#fn1" id="r1-752">1</a></sup></p>
+    <p>Anthropic’s 2026 report describes a move beyond single-step automation towards multi-stage workflows spanning teams. Its examples and survey findings suggest that the conversation is no longer confined to whether an assistant can produce a useful first draft.<sup><a href="#fn1">1</a></sup></p>
     <p>Microsoft’s 2026 Work Trend Index offers a complementary perspective: the issue is how people integrate AI into their work and decide when to use it.</p>
-    <p>The research draws on a survey of 20,000 AI-using workers across 10 markets, alongside anonymised Microsoft 365 productivity signals. That population matters. Findings about people already using AI at work should not be presented as descriptions of every worker or organisation.<sup><a href="#fn3" id="r3-307">3</a></sup></p>
-    <p>Microsoft’s Australian account of the research describes a gap between employees’ adoption and organisations’ readiness to redesign work. It argues that as agents take on execution, people need to set direction, apply judgement and own outcomes.<sup><a href="#fn3" id="r3-5477">3</a></sup></p>
+    <p>The research draws on a survey of 20,000 AI-using workers across 10 markets, alongside anonymised Microsoft 365 productivity signals. That population matters. Findings about people already using AI at work should not be presented as descriptions of every worker or organisation.<sup><a href="#fn3">3</a></sup></p>
+    <p>Microsoft’s Australian account of the research describes a gap between employees’ adoption and organisations’ readiness to redesign work. It argues that as agents take on execution, people need to set direction, apply judgement and own outcomes.<sup><a href="#fn3">3</a></sup></p>
     <p>The resulting management problem is concrete.</p>
     <p>Giving someone an assistant changes how they produce an answer. Giving a system access to tools and business processes changes what can happen after that answer.</p>
     <p>The organisation must decide what the system can inspect, what it can recommend, what it can change and when it must stop.</p>
@@ -79,13 +79,13 @@
     <h2>The most useful architecture may be deliberately modest</h2>
     <p>It is tempting to treat autonomy as a ladder: observe, recommend, act, then operate without intervention.</p>
     <p>But moving upwards is not automatically progress. More authority is useful only when it improves the process enough to justify the additional risk.</p>
-    <p>Gartner’s May 2026 guidance distinguishes four levels: observe, advise, act with approval and act autonomously. Each crosses a different trust boundary and requires different controls.<sup><a href="#fn2" id="r2-244">2</a></sup></p>
+    <p>Gartner’s May 2026 guidance distinguishes four levels: observe, advise, act with approval and act autonomously. Each crosses a different trust boundary and requires different controls.<sup><a href="#fn2">2</a></sup></p>
     <p>For an exception-handling workflow, those levels could look like this:</p>
     <div class="ar-table"><table><thead><tr><th>Level</th><th>Proposed role</th></tr></thead><tbody><tr><td>Observe</td><td>Retrieve the invoice, order and supporting records.</td></tr><tr><td>Advise</td><td>Explain the apparent discrepancy and propose next steps.</td></tr><tr><td>Act with approval</td><td>Send an approved supplier query or update an approved case record.</td></tr><tr><td>Act autonomously</td><td>Resolve a narrowly defined category of routine cases within explicit limits.</td></tr></tbody></table></div>
     <p>This is an illustrative application of the framework, not a claim that every process should reach the final level.</p>
     <p>A read-only investigation assistant may be the right long-term design for a sensitive workflow. A tightly bounded autonomous action may be appropriate elsewhere.</p>
     <p>The mistake is to grant broad access because the system performs well on a narrow task.</p>
-    <p>Gartner identifies precisely this mismatch between an agent’s ability to act and the scope of access it receives as a source of enterprise failure.<sup><a href="#fn2" id="r2-8629">2</a></sup></p>
+    <p>Gartner identifies precisely this mismatch between an agent’s ability to act and the scope of access it receives as a source of enterprise failure.<sup><a href="#fn2">2</a></sup></p>
     <p>For 2027, a useful design goal is not maximum autonomy. It is appropriate authority.</p>
     <h2>Four practical possibilities for 2027</h2>
     <p>The following are proposed applications, not verified deployments or promised returns. They illustrate where the exception-handling pattern could be tested.</p>
@@ -120,7 +120,7 @@
     <h2>“Human in the loop” is not a complete operating model</h2>
     <p>A human approval step can look reassuring on a diagram.</p>
     <p>In practice, the reviewer may receive a vague recommendation, inaccessible sources and a deadline. Clicking approve becomes the easiest way to keep the queue moving.</p>
-    <p>Gartner’s 2026 guidance warns that approval fatigue and time pressure can weaken human review. It recommends clear approval workflows, audit trails, security testing and agent-specific incident response when systems can act after approval.<sup><a href="#fn2" id="r2-3526">2</a></sup></p>
+    <p>Gartner’s 2026 guidance warns that approval fatigue and time pressure can weaken human review. It recommends clear approval workflows, audit trails, security testing and agent-specific incident response when systems can act after approval.<sup><a href="#fn2">2</a></sup></p>
     <p>That warning should shape the interface.</p>
     <p>A reviewer needs the disputed detail, relevant evidence, proposed action and known uncertainty. They also need enough authority to reject the recommendation or request further investigation.</p>
     <p>Responsibility must be specific.</p>
@@ -133,7 +133,7 @@
     <p>They need to understand the difference between a retrieved fact, an interpretation and a proposed action.</p>
     <p>They need examples of appropriate reliance: when a recommendation is usable, when it requires checking and when missing evidence should stop the process.</p>
     <p>They need to know how to report an error without inventing a workaround.</p>
-    <p>Microsoft’s 2026 research places intentional delegation and human judgement at the centre of effective AI use. Its Canadian account highlights the practice of pausing before a task to decide what belongs with AI and what belongs with a person.<sup><a href="#fn4" id="r4-4767">4</a></sup></p>
+    <p>Microsoft’s 2026 research places intentional delegation and human judgement at the centre of effective AI use. Its Canadian account highlights the practice of pausing before a task to decide what belongs with AI and what belongs with a person.<sup><a href="#fn4">4</a></sup></p>
     <p>An enterprise can turn that habit into a practical briefing.</p>
     <p>For each workflow, explain:</p>
     <ul class="ar-list"><li>What the system is meant to accomplish.</li><li>Which sources and tools it can access.</li><li>Which actions it may take.</li><li>What users must verify.</li><li>When it must escalate.</li><li>How a mistake is corrected.</li></ul>
@@ -149,7 +149,7 @@
     <p>This is a proposed evaluation framework, not a summary of the survey methods cited earlier.</p>
     <p>The distinction between potential and confirmed benefit is particularly important. A disputed charge is not recovered money. A suggested correction is not a completed resolution.</p>
     <p>Similarly, a faster first draft is not necessarily a faster approval process.</p>
-    <p>Anthropic’s reported ROI findings make agents worth investigating. They do not remove the need to establish the economics of your own workflow.<sup><a href="#fn1" id="r1-5892">1</a></sup></p>
+    <p>Anthropic’s reported ROI findings make agents worth investigating. They do not remove the need to establish the economics of your own workflow.<sup><a href="#fn1">1</a></sup></p>
     <p>Nor should Gartner’s forecasts become an excuse to avoid experimentation. They identify risks to manage, not an inevitable outcome.</p>
     <p>The point is to make the investment falsifiable: establish what would count as success, and what would persuade you not to scale.</p>
     <h2>What 2027 could make possible</h2>
@@ -161,7 +161,7 @@
     <p>A purchasing discrepancy might reveal a recurring contract ambiguity. Repeated missing approvals might expose a broken hand-off. Editorial flags might show that teams need better source records before drafting begins.</p>
     <p>In that model, agents help surface process weaknesses. People decide whether to fix the underlying system.</p>
     <p>A second possibility is more selective autonomy. Once a narrowly defined category of cases has demonstrated reliable performance, an organisation could permit limited action within explicit boundaries, while continuing to route ambiguous cases to people.</p>
-    <p>Gartner’s framework supports this differentiated approach. It recommends stronger monitoring, rollback mechanisms, circuit breakers and clear ownership for autonomous agents—not the same controls applied indiscriminately to every system.<sup><a href="#fn2" id="r2-5327">2</a></sup></p>
+    <p>Gartner’s framework supports this differentiated approach. It recommends stronger monitoring, rollback mechanisms, circuit breakers and clear ownership for autonomous agents—not the same controls applied indiscriminately to every system.<sup><a href="#fn2">2</a></sup></p>
     <p>The ambition for 2027 should therefore be better judgement about where autonomy belongs.</p>
     <p>Not autonomy everywhere.</p>
     <h2>Begin with one queue</h2>
@@ -196,6 +196,6 @@
 
 </div>
 
-<script src="/assets/js/site.js?v=41" defer></script>
+<script src="/assets/js/site.js?v=42" defer></script>
 </body>
 </html>
