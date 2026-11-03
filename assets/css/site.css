@@ -665,5 +665,6 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh .ar-body blockquote{margin:1.2em 0 1.4em;padding:4px 0 4px 24px;border-left:3px solid var(--ink);font-size:1.15em;line-height:1.55;color:var(--ink)}
 #top.sbh .ar-table tr>*:nth-child(3):last-child{color:var(--body)}
 #top.sbh .ar-table th:nth-child(3)~*,#top.sbh .ar-table td:first-child:nth-last-child(3){width:24%}
+#top.sbh .post .im img{object-fit:contain;background:#DEDEDE}
 
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}

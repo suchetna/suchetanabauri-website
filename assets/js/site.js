@@ -65,6 +65,7 @@
   }
   // Blog topic filter
   var tb=root.querySelector('.bl-topics'), cards=root.querySelectorAll('[data-posts] .bl-card');
+  if(tb){tb.querySelectorAll('button[data-topic]').forEach(function(x){var t=x.getAttribute('data-topic');if(t!=='all'&&!root.querySelector('[data-posts] .bl-card[data-topic="'+t+'"]'))x.hidden=true;});}
   if(tb){tb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
     tb.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b);});
     var t=b.getAttribute('data-topic');cards.forEach(function(c){c.hidden=!(t==='all'||c.getAttribute('data-topic')===t);c.classList.add('in');});});}
