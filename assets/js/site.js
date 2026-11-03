@@ -322,6 +322,10 @@
     requestAnimationFrame(frame);
   });
 
+  // Article reading progress
+  var bar=root.querySelector('.ar-progress span'),art=root.querySelector('.ar-body');
+  if(bar&&art){var rp=function(){var r=art.getBoundingClientRect(),h=r.height-window.innerHeight*.6;bar.style.transform='scaleX('+Math.min(1,Math.max(0,-r.top/Math.max(1,h)))+')';};window.addEventListener('scroll',rp,{passive:true});window.addEventListener('resize',rp);rp();}
+
   // Custom cursor: a black dot that follows the mouse (desktop only)
   var fine=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if(fine){
