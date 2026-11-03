@@ -663,5 +663,7 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh .bl-card .bl-read svg{width:14px;height:14px}
 @media (max-width:640px){#top.sbh .ar-body{font-size:18px}#top.sbh .ar-head{padding-top:36px}#top.sbh .ar-hero img{border-radius:14px}}
 #top.sbh .ar-body blockquote{margin:1.2em 0 1.4em;padding:4px 0 4px 24px;border-left:3px solid var(--ink);font-size:1.15em;line-height:1.55;color:var(--ink)}
+#top.sbh .ar-table tr>*:nth-child(3):last-child{color:var(--body)}
+#top.sbh .ar-table th:nth-child(3)~*,#top.sbh .ar-table td:first-child:nth-last-child(3){width:24%}
 
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
