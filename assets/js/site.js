@@ -327,6 +327,51 @@
   var bar=root.querySelector('.ar-progress span'),art=root.querySelector('.ar-body');
   if(bar&&art){var rp=function(){var r=art.getBoundingClientRect(),h=r.height-window.innerHeight*.6;bar.style.transform='scaleX('+Math.min(1,Math.max(0,-r.top/Math.max(1,h)))+')';};window.addEventListener('scroll',rp,{passive:true});window.addEventListener('resize',rp);rp();}
 
+  // Service hero: a spoken waveform that becomes a written, signed article (original animation)
+  root.querySelectorAll('canvas[data-voice]').forEach(function(cv){
+    var ctx=cv.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1),W=0,H=0,vis=true,mx=0,my=0,tx=0,ty=0,start=performance.now();
+    var lines=[.86,.92,.7,.95,.88,.6,.9,.82,.45];
+    function size(){var b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+    size();window.addEventListener('resize',size);if('ResizeObserver' in window)new ResizeObserver(size).observe(cv);window.addEventListener('load',size);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(size);
+    window.addEventListener('mousemove',function(e){var b=cv.getBoundingClientRect();tx=((e.clientX-b.left)/b.width-.5);ty=((e.clientY-b.top)/b.height-.5);},{passive:true});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;}).observe(cv);
+    function rr(x,y,w,h,r){r=Math.max(0,Math.min(r,w/2,h/2));ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+    function frame(now){
+      var t=Math.max(0,(now-start)/1000);
+      if((vis||reduce)&&W>0){
+        mx+=(tx-mx)*.05;my+=(ty-my)*.05;
+        var per=9,c=reduce?per*.8:t%per,fill=Math.min(1,Math.max(0,(c-.6)/5.4)),fade=c>8.2?1-(c-8.2)/.8:1;
+        ctx.clearRect(0,0,W,H);
+        // page
+        var px=(.44+mx*.02)*W,py=(.12+my*.02)*H,pw=.5*W,ph=.76*H;
+        rr(px,py,pw,ph,W*.02);ctx.fillStyle='#F4F4F4';ctx.fill();ctx.strokeStyle='#1A1A1A';ctx.lineWidth=1.4;ctx.stroke();
+        // headline bar
+        ctx.globalAlpha=fade;
+        rr(px+pw*.1,py+ph*.08,pw*.62*Math.min(1,fill*4),ph*.045,ph*.02);ctx.fillStyle='#1A1A1A';ctx.fill();
+        // text lines fill in like typing
+        var n=lines.length,done=fill*n;
+        for(var i=0;i<n;i++){var p=Math.max(0,Math.min(1,done-i));if(p<=0)break;
+          rr(px+pw*.1,py+ph*(.2+i*.068),pw*.8*lines[i]*p,ph*.022,ph*.011);ctx.fillStyle='rgba(26,26,26,.32)';ctx.fill();
+          if(p<1&&!reduce){ctx.fillStyle='#1A1A1A';ctx.fillRect(px+pw*.1+pw*.8*lines[i]*p+3,py+ph*(.2+i*.068)-ph*.008,2,ph*.038);}}
+        // quote mark and byline once complete
+        if(fill>=1){var q=Math.min(1,(c-6)/.6);ctx.globalAlpha=fade*q;
+          ctx.fillStyle='#1A1A1A';ctx.font='italic '+Math.round(ph*.16)+'px "Instrument Serif",Georgia,serif';ctx.fillText('“',px+pw*.78,py+ph*.2);
+          ctx.beginPath();ctx.arc(px+pw*.14,py+ph*.88,ph*.035,0,6.283);ctx.fill();
+          rr(px+pw*.21,py+ph*.865,pw*.3,ph*.03,ph*.015);ctx.fill();}
+        ctx.globalAlpha=1;
+        // spoken waveform on the left, flowing towards the page
+        var bx=(.05+mx*.04)*W,cy=(.5+my*.04)*H,bars=18,talking=c<6.2&&!reduce;
+        for(var k=0;k<bars;k++){var x=bx+k*W*.019,amp=talking?(.15+.85*Math.abs(Math.sin(t*3.1+k*.7)*Math.cos(t*1.7+k*.33))):.08;
+          var hgt=H*.2*amp*(1-k/bars*.55);rr(x,cy-hgt/2,W*.009,Math.max(W*.009,hgt),W*.0045);ctx.fillStyle='rgba(26,26,26,'+(.85-k*.035).toFixed(2)+')';ctx.fill();}
+        // dotted carry line into the page
+        ctx.setLineDash([3,5]);ctx.strokeStyle='rgba(26,26,26,.35)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(bx+bars*W*.019,cy);ctx.lineTo(px-6,cy);ctx.stroke();ctx.setLineDash([]);
+        if(talking){var d=((t*.6)%1);ctx.fillStyle='#1A1A1A';ctx.beginPath();ctx.arc(bx+bars*W*.019+(px-6-bx-bars*W*.019)*d,cy,3,0,6.283);ctx.fill();}
+      }
+      if(!reduce)requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  });
+
   // Custom cursor: a black dot that follows the mouse (desktop only)
   var fine=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if(fine){
