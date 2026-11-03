@@ -688,5 +688,9 @@ html.has-dot,html.has-dot *{cursor:none !important}
 @media (max-width:900px){#top.sbh .cs-facts{grid-template-columns:1fr 1fr}#top.sbh .cs-facts div,#top.sbh .cs-facts div+div{padding:14px 12px 14px 0;border-left:0;border-bottom:1px solid var(--line)}#top.sbh .cs-fig{margin:1.4em 0}}
 #top.sbh a.wcard{display:block;color:inherit}
 #top.sbh a.wk-card{display:block;color:inherit}
+#top.sbh a.pf-big,#top.sbh a.pf-card{color:inherit}
+#top.sbh a.pf-card{display:block}
+#top.sbh .pf-card .more-l,#top.sbh .pf-big .more-l{margin-top:12px}
+#top.sbh .pf-card .more-l{margin:14px 14px 0}
 
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
