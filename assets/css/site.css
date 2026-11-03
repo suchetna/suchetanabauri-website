@@ -667,4 +667,11 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh .ar-table th:nth-child(3)~*,#top.sbh .ar-table td:first-child:nth-last-child(3){width:24%}
 #top.sbh .post .im img{object-fit:contain;background:#DEDEDE}
 
+/* Card tags: dark pills that stand clear of the illustrations */
+#top.sbh .bl-img{background:#DEDEDE}
+#top.sbh .bl-img img{transform:scale(.86);transform-origin:50% 62%}
+#top.sbh .bl-tag,#top.sbh .post .ptag{top:16px;left:16px;background:var(--ink);color:#fff;font-size:13px;font-weight:500;letter-spacing:.02em;padding:7px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+#top.sbh .post .im{background:#DEDEDE}
+#top.sbh .post:not(.big) .im img{transform:scale(.9);transform-origin:50% 62%}
+
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
