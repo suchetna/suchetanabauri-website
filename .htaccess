@@ -12,6 +12,9 @@ RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteCond %{HTTP_HOST} ^(?:www\.)?(suchetanabauri\.com)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
+# Old test-site folder -> home page
+RewriteRule ^new(/.*)?$ / [L,R=301]
+
 # Old WordPress pages and posts (exported 4 Nov 2026) -> new pages
 RewriteRule ^ai-enablement-consulting-services/?$ /#services [NE,L,R=301]
 RewriteRule ^ai-adoption-case-studies/?$ /work/ [NE,L,R=301]
