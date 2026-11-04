@@ -386,3 +386,15 @@
     (function loop(){var k=reduce?1:.22;x+=(tx-x)*k;y+=(ty-y)*k;dot.style.transform='translate3d('+x+'px,'+y+'px,0) translate(-50%,-50%)';requestAnimationFrame(loop);})();
   }
 })();
+
+/* ===== Light / dark theme toggle ===== */
+(function(){
+  var root=document.documentElement;
+  function stored(){try{return localStorage.getItem('theme')}catch(e){return null}}
+  function label(){var d=root.getAttribute('data-theme')==='dark';document.querySelectorAll('[data-theme-toggle]').forEach(function(b){b.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode');b.setAttribute('aria-pressed',d?'true':'false')})}
+  function set(t,save){root.setAttribute('data-theme',t);if(save){try{localStorage.setItem('theme',t)}catch(e){}}label()}
+  document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-theme-toggle]');if(!b)return;set(root.getAttribute('data-theme')==='dark'?'light':'dark',true)});
+  if(window.matchMedia){var mq=matchMedia('(prefers-color-scheme: dark)');var on=function(ev){if(!stored())set(ev.matches?'dark':'light',false)};mq.addEventListener?mq.addEventListener('change',on):mq.addListener&&mq.addListener(on)}
+  if(!root.getAttribute('data-theme'))set('light',false);
+  label();
+})();

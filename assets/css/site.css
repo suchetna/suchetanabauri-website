@@ -718,4 +718,72 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh .ar-legal h2{font-size:24px}
 #top.sbh .ar-head > .tag:first-child{margin-left:0}
 
+/* ===================== THEME TOGGLE ===================== */
+#top.sbh .nav-r{justify-self:end;display:flex;align-items:center;gap:10px}
+#top.sbh .nav .nav-r .btn{justify-self:auto}
+#top.sbh .theme-t{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--ink);border:1px solid var(--line);transition:background .2s,border-color .2s}
+#top.sbh .theme-t:hover{background:var(--chip)}
+#top.sbh .theme-t svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#top.sbh .theme-t .i-sun{display:none}
+html[data-theme=dark] #top.sbh .theme-t .i-sun{display:block}
+html[data-theme=dark] #top.sbh .theme-t .i-moon{display:none}
+@media (max-width:900px){#top.sbh .theme-t{width:36px;height:36px}}
+
+/* ===================== DARK THEME ===================== */
+html[data-theme=dark]{color-scheme:dark;background:#141414}
+html[data-theme=dark] body,html[data-theme=dark] body:has(#top.sbh){background:#141414}
+html[data-theme=dark] #top.sbh{--bg:#141414;--card:#1F1F1F;--chip:#2B2B2B;--ink:#EDEDED;--body:#A6A6A6;--label:#B3B3B3;--muted:#8C8C8C;--line:#333}
+html[data-theme=dark] #top.sbh .nav{background:rgba(20,20,20,.82)}
+html[data-theme=dark] #top.sbh .btn{color:#141414 !important}
+html[data-theme=dark] #top.sbh .btn:hover{background:#CFCFCF}
+html[data-theme=dark] #top.sbh .hero .bigword{color:#262626}
+html[data-theme=dark] #top.sbh .hero .name{background:linear-gradient(180deg,#EDEDED 35%,rgba(237,237,237,.35) 100%);-webkit-background-clip:text;background-clip:text}
+html[data-theme=dark] #top.sbh .hero .pill,html[data-theme=dark] #top.sbh .hero-pills-m span{background:var(--chip);color:var(--label)}
+html[data-theme=dark] #top.sbh .hero a.pill:hover,html[data-theme=dark] #top.sbh .hero a.pill:focus-visible{background:var(--ink);color:#141414}
+html[data-theme=dark] #top.sbh .hero .sticker{background:#262626;color:var(--ink);box-shadow:0 6px 20px rgba(0,0,0,.4)}
+html[data-theme=dark] #top.sbh .av{background:#262626}
+html[data-theme=dark] #top.sbh .wcard .ov{background:linear-gradient(180deg,rgba(31,31,31,0),rgba(31,31,31,.92) 55%)}
+html[data-theme=dark] #top.sbh .wcard .ptag{background:#262626;color:var(--ink)}
+html[data-theme=dark] #top.sbh .ccard .ov{background:linear-gradient(180deg,rgba(31,31,31,0),#1F1F1F 60%)}
+html[data-theme=dark] #top.sbh .rule .ov{background:linear-gradient(180deg,rgba(31,31,31,0) 30%,#1F1F1F 92%)}
+html[data-theme=dark] #top.sbh .learned figcaption{background:linear-gradient(180deg,rgba(31,31,31,0) 45%,#1F1F1F 85%)}
+html[data-theme=dark] #top.sbh .ico,html[data-theme=dark] #top.sbh .row .val,html[data-theme=dark] #top.sbh .o-spin b,html[data-theme=dark] #top.sbh .sv-inc svg,html[data-theme=dark] #top.sbh .bl-topics button.on,html[data-theme=dark] #top.sbh .bl-tag,html[data-theme=dark] #top.sbh .post .ptag{color:#141414}
+html[data-theme=dark] #top.sbh .tl::before{background:#444}
+html[data-theme=dark] #top.sbh .tl i{border-color:#444}
+html[data-theme=dark] #top.sbh .tl i[style*="#1A1A1A"]{background:var(--ink) !important;border-color:var(--ink) !important}
+html[data-theme=dark] #top.sbh .tl i[style*="#8A8A8A"]{background:#8A8A8A !important}
+html[data-theme=dark] #top.sbh .tl i[style*="#BDBDBD"]{background:#555 !important}
+html[data-theme=dark] #top.sbh .tl i[style*="#DADADA"]{background:#333 !important}
+html[data-theme=dark] #top.sbh .row{background:#262626}
+html[data-theme=dark] #top.sbh .row.plain{background:var(--card)}
+html[data-theme=dark] #top.sbh .panel::after{background:rgba(20,20,20,.45)}
+html[data-theme=dark] #top.sbh .tile{background:rgba(31,31,31,.85)}
+html[data-theme=dark] #top.sbh .ab-social a:hover{background:#3A3A3A}
+html[data-theme=dark] #top.sbh .status{color:var(--label)}
+html[data-theme=dark] #top.sbh .status i{box-shadow:0 0 0 4px rgba(255,255,255,.06),0 0 12px 4px rgba(255,255,255,.1)}
+html[data-theme=dark] #top.sbh .tl-track{background:#333}
+html[data-theme=dark] #top.sbh .tline .ti::before{background:#444}
+html[data-theme=dark] #top.sbh .tline .ti.lit::before{background:var(--ink)}
+html[data-theme=dark] #top.sbh .tline .ti.now::before{background:var(--bg)}
+html[data-theme=dark] #top.sbh .o-ring{border-color:#3A3A3A}
+html[data-theme=dark] #top.sbh .o-face{border-color:#1F1F1F}
+html[data-theme=dark] #top.sbh .orgs{color:#777}
+html[data-theme=dark] #top.sbh .bl-topics button:hover{background:#3A3A3A}
+html[data-theme=dark] #top.sbh .bl-topics button.on:hover{background:var(--ink)}
+html[data-theme=dark] #top.sbh .sv-band{background:#1F1F1F;box-shadow:inset 0 0 0 1px #2B2B2B}
+html[data-theme=dark] #top.sbh .sv-steps li:hover{background:var(--ink);color:#141414}
+html[data-theme=dark] #top.sbh .sv-steps li:hover p{color:#444}
+html[data-theme=dark] #top.sbh .sv-steps b{color:#555}
+html[data-theme=dark] #top.sbh .ar-body{color:#D4D4D4}
+html[data-theme=dark] #top.sbh .ar-notes li:target{background:#2B2B2B}
+html[data-theme=dark] #top.sbh .post .im,html[data-theme=dark] #top.sbh .post .im img,html[data-theme=dark] #top.sbh .bl-img,html[data-theme=dark] #top.sbh .cs-fig,html[data-theme=dark] #top.sbh .wk-illo,html[data-theme=dark] #top.sbh .sv-proof-img{background:#212121}
+/* Line illustrations are drawn on light grey: invert them so they read as light lines on dark */
+html[data-theme=dark] #top.sbh img[src*="/blog-"]:not([src*="blog-pen"]),html[data-theme=dark] #top.sbh img[src*="case-suchflow"]{filter:invert(1);background:#DEDEDE !important}
+/* Hero animations draw dark strokes: invert the canvas */
+html[data-theme=dark] #top.sbh .sv-vis canvas{filter:invert(.93)}
+/* Photos: slightly softer so they don't glare */
+html[data-theme=dark] #top.sbh .wk-img img,html[data-theme=dark] #top.sbh .wcard img,html[data-theme=dark] #top.sbh .ccard img,html[data-theme=dark] #top.sbh .pf-img img{filter:brightness(.88)}
+html[data-theme=dark] .cursor-dot{background:#EDEDED}
+html[data-theme=dark] .cursor-dot.big{background:transparent;box-shadow:inset 0 0 0 1.5px #EDEDED}
+
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
