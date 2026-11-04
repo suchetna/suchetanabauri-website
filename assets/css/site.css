@@ -709,5 +709,7 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh .sv-proof p{font-size:17px;line-height:1.6;color:var(--body);margin-top:12px}
 #top.sbh .sv-proof .more-l{margin-top:18px}
 @media (max-width:900px){#top.sbh .sv-proof{grid-template-columns:1fr}#top.sbh .sv-proof-txt{padding:4px 8px 12px}}
+#top.sbh .cs-made{font-size:1.2em;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+#top.sbh .case-more{display:inline-flex;margin-top:28px}
 
 html{scroll-behavior:smooth}body{margin:0;background:#EBEBEB}
