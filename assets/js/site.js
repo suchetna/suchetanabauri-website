@@ -398,3 +398,13 @@
   if(!root.getAttribute('data-theme'))set('light',false);
   label();
 })();
+
+/* ===== Mobile menu ===== */
+(function(){
+  var b=document.querySelector('[data-menu-toggle]'),m=document.getElementById('m-menu');if(!b||!m)return;
+  function set(open){m.hidden=!open;b.setAttribute('aria-expanded',open?'true':'false');b.setAttribute('aria-label',open?'Close menu':'Open menu')}
+  b.addEventListener('click',function(){set(m.hidden)});
+  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){set(false);b.focus()}});
+  window.addEventListener('resize',function(){if(window.innerWidth>640&&!m.hidden)set(false)});
+})();
