@@ -1,0 +1,34 @@
+# Suchetana Bauri — static site rules (Apache / Hostinger)
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Always use https and the main domain without www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(suchetanabauri\.com)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Old WordPress addresses -> new pages
+RewriteRule ^insights/?$ /blog/ [L,R=301]
+RewriteRule ^insights/.+$ /blog/ [L,R=301]
+RewriteRule ^(category|tag|author)/.*$ /blog/ [L,R=301]
+RewriteRule ^(feed|comments/feed)/?$ /blog/ [L,R=301]
+RewriteRule ^(about-me|about-us)/?$ /about/ [L,R=301]
+RewriteRule ^(portfolio|projects|case-studies)/?.*$ /work/ [L,R=301]
+RewriteRule ^(services|service)/?$ /#services [NE,L,R=301]
+RewriteRule ^(contact|contact-me|contact-us)/?$ /#contact [NE,L,R=301]
+RewriteRule ^(wp-admin|wp-login\.php|wp-content|wp-includes|xmlrpc\.php).*$ / [L,R=301]
+</IfModule>
+
+# Caching: pages refresh quickly, versioned CSS/JS and images cache for a long time
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/html "access plus 5 minutes"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType image/webp "access plus 6 months"
+</IfModule>
