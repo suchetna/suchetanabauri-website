@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://suchetanabauri.com/sitemap.xml
+Disallow: /tools/
