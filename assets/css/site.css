@@ -854,3 +854,9 @@ html[data-theme=dark] #top.sbh .ct-field input,html[data-theme=dark] #top.sbh .c
 @media (max-width:860px){#top.sbh .ct-grid{grid-template-columns:1fr;gap:40px}}
 @media (max-width:560px){#top.sbh .ct-row{grid-template-columns:1fr}}
 #top.sbh.ct-page .ar-head{max-width:none}#top.sbh.ct-page .ar-head>*{max-width:820px}#top.sbh.ct-page .ar-head .tag{margin-left:0}
+#top.sbh .post p{margin-bottom:0}
+#top.sbh .post .more-l{margin:14px 14px 16px}
+#top.sbh .post:hover .more-l svg,#top.sbh .bl-card:hover .bl-read svg,#top.sbh .scard:hover .more-l svg,#top.sbh .wcard:hover .more-l svg,#top.sbh .wk-card:hover .more-l svg,#top.sbh .pf-card:hover .more-l svg{transform:translateX(3px)}
+#top.sbh .more-l svg,#top.sbh .bl-read svg{transition:transform .2s}
+#top.sbh .posts-all{text-align:center;margin:36px 0 0}
+#top.sbh .posts-all .more-l{margin:0;font-size:16px;border-bottom:1px solid currentColor;padding-bottom:2px}
