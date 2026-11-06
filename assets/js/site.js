@@ -469,7 +469,10 @@
   var f=document.getElementById('ct-form');if(!f)return;
   var status=document.getElementById('ct-status'),btn=f.querySelector('.ct-send'),sel=document.getElementById('ct-topic');
   var q=new URLSearchParams(location.search);
-  function done(){f.outerHTML='<div class="ct-done" role="status"><h2>Thank you, your message is on its way.</h2><p>I’ll reply within two working days. If it’s urgent, email <a href="mailto:hello@suchetanabauri.com">hello@suchetanabauri.com</a>.</p></div>'}
+  function done(name){
+    var first=(name||'').trim().split(/\s+/)[0]||'',esc=first.replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]});
+    f.outerHTML='<div class="ct-done" role="status"><h2>Your idea is on its way <em>somewhere.</em></h2><p>Thanks for writing'+(esc?', '+esc:'')+'. I’ll reply within two working days. If it’s time-sensitive, WhatsApp is the quickest way to reach me.</p><a class="more-l ct-wa" href="https://wa.me/917675003859" target="_blank" rel="noopener">Message me on WhatsApp <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>';
+  }
   if(q.get('sent')==='1'){done();return}
   var t=q.get('topic');
   if(t&&sel){for(var k=0;k<sel.options.length;k++){if(sel.options[k].getAttribute('data-slug')===t){sel.selectedIndex=k;break}}}
@@ -490,7 +493,7 @@
     btn.disabled=true;say('Sending…');
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
       .then(function(r){return r.json()})
-      .then(function(j){if(j&&j.success){done();if(window.gtag)gtag('event','generate_lead',{topic:data.topic})}else throw 0})
+      .then(function(j){if(j&&j.success){done(data.name);if(window.gtag)gtag('event','generate_lead',{topic:data.topic})}else throw 0})
       .catch(function(){btn.disabled=false;say('Something went wrong. Please try again, or email hello@suchetanabauri.com.',true)});
   });
 })();

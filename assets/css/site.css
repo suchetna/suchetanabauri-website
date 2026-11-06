@@ -860,3 +860,4 @@ html[data-theme=dark] #top.sbh .ct-field input,html[data-theme=dark] #top.sbh .c
 #top.sbh .more-l svg,#top.sbh .bl-read svg{transition:transform .2s}
 #top.sbh .posts-all{text-align:center;margin:36px 0 0}
 #top.sbh .posts-all .more-l{margin:0;font-size:16px;border-bottom:1px solid currentColor;padding-bottom:2px}
+#top.sbh .ct-done .ct-wa{margin-top:18px;font-size:15px}#top.sbh .ct-done .ct-wa:hover svg{transform:translateX(3px)}
