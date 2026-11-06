@@ -408,3 +408,58 @@
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden){set(false);b.focus()}});
   window.addEventListener('resize',function(){if(window.innerWidth>640&&!m.hidden)set(false)});
 })();
+
+/* ---- Listen to article (browser text-to-speech) ---- */
+(function(){
+  var body=document.querySelector('.ar-body'),meta=document.querySelector('.ar-meta');
+  if(!body||!meta||!('speechSynthesis' in window)||!window.SpeechSynthesisUtterance)return;
+  var synth=window.speechSynthesis,chunks=[],i=0,state='idle',voice=null;
+  function txt(el){return (el.textContent||'').replace(/\s+/g,' ').trim()}
+  var h1=document.querySelector('.ar-h1'),st=document.querySelector('.ar-stand');
+  if(h1)chunks.push(txt(h1));if(st)chunks.push(txt(st));
+  body.querySelectorAll('p,h2,h3,blockquote,li').forEach(function(el){
+    if(el.closest('.ar-notes'))return;
+    if(el.tagName==='P'&&el.closest('blockquote,li'))return;
+    var c=el.cloneNode(true);c.querySelectorAll('sup').forEach(function(s){s.remove()});
+    var t=txt(c);if(t)chunks.push(t);
+  });
+  if(!chunks.length)return;
+  function pick(){
+    var v=synth.getVoices();if(!v.length)return;
+    var pref=['en-GB','en-IN','en-US','en'];
+    for(var p=0;p<pref.length&&!voice;p++){
+      var m=v.filter(function(x){return x.lang&&x.lang.replace('_','-').indexOf(pref[p])===0});
+      voice=m.filter(function(x){return /natural|neural|google|premium|enhanced/i.test(x.name)})[0]||m[0]||null;
+    }
+  }
+  pick();if('onvoiceschanged' in synth)synth.addEventListener('voiceschanged',pick);
+  var wrap=document.createElement('div');wrap.className='ar-listen';
+  var btn=document.createElement('button');btn.type='button';btn.className='ar-listen-btn';
+  var stop=document.createElement('button');stop.type='button';stop.className='ar-listen-stop';stop.hidden=true;
+  stop.setAttribute('aria-label','Stop listening');stop.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>';
+  wrap.appendChild(btn);wrap.appendChild(stop);meta.insertAdjacentElement('afterend',wrap);
+  var ICON={play:'<path d="M8 5v14l11-7z"/>',pause:'<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>'};
+  function render(){
+    var playing=state==='playing';
+    btn.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24">'+(playing?ICON.pause:ICON.play)+'</svg><span>'+(playing?'Pause':state==='paused'?'Resume':'Listen to this article')+'</span>';
+    btn.setAttribute('aria-pressed',playing?'true':'false');
+    stop.hidden=state==='idle';
+  }
+  function speak(){
+    if(i>=chunks.length){state='idle';i=0;render();return}
+    var u=new SpeechSynthesisUtterance(chunks[i]);
+    if(voice){u.voice=voice;u.lang=voice.lang}else u.lang='en-GB';
+    u.rate=1;u.onend=function(){if(state!=='playing')return;i++;speak()};
+    u.onerror=function(e){if(e.error==='interrupted'||e.error==='canceled')return;state='idle';render()};
+    synth.speak(u);
+  }
+  function halt(){synth.cancel()}
+  btn.addEventListener('click',function(){
+    if(state==='playing'){state='paused';halt()}            // pause: remember paragraph, restart it on resume
+    else{halt();state='playing';speak()}
+    render();
+  });
+  stop.addEventListener('click',function(){state='idle';i=0;halt();render()});
+  window.addEventListener('pagehide',halt);
+  halt();render();
+})();
