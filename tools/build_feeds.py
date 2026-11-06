@@ -20,7 +20,7 @@ work=[page(p) for p in sorted(glob.glob('work/*/index.html')) if p!='work/index.
 L=["# Suchetana Bauri","",
 "> Communications strategist and AI enablement consultant based in Hyderabad, India, with 17+ years in corporate, internal, employee and change communications. She helps organisations make AI useful and adopted well: AI readiness assessments, workflow design, change communication and team enablement, alongside thought leadership, branding, digital marketing and UX/UI design.","",
 "Suchetana works remotely with teams worldwide. Education: MA and BA in English Literature (Jadavpur University); PG Certificate in Digital Marketing & Communications (MICA); Google UX Design and Google Digital Marketing & E-commerce certificates.","",
-"Contact: hello@suchetanabauri.com or the contact form at https://suchetanabauri.com/contact/","",
+"Contact: hello@suchetanabauri.com or the contact form at https://suchetanabauri.com/lets-talk/","",
 "## About",f"- [About Suchetana Bauri]({S}/about/): Background, experience and approach","",
 "## Services"]+[f"- [{x['title']}]({x['url']}): {x['desc']}" for x in services]+["",
 "## Writing"]+[f"- [{x['h1'] or x['title']}]({x['url']}): {x['desc']}" for x in posts]+["",

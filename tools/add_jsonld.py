@@ -49,7 +49,7 @@ for p in glob.glob('**/index.html',recursive=True):
             h=meta(t,r'<h1 class="ar-h1">(.*?)</h1>'); d=meta(t,r'<time datetime="([^"]*)"')
             posts.append({"@type":"BlogPosting","headline":re.sub('<[^>]+>','',h or ''),"url":u,"datePublished":d})
         g=[{"@type":"Blog","@id":S+"/blog/#blog","url":url,"name":title,"description":desc,"author":ref,"blogPost":posts}]
-    elif p=='contact/index.html':
+    elif p=='lets-talk/index.html':
         g=[{"@type":"ContactPage","@id":url+"#page","url":url,"name":title,"description":desc,"isPartOf":{"@id":WID},"about":{"@id":PID}}]
     elif p.startswith('services/'):
         name=title.split(' | ')[0]
