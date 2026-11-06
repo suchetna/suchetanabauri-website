@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /tools/
 
 Sitemap: https://suchetanabauri.com/sitemap.xml
-Disallow: /tools/
