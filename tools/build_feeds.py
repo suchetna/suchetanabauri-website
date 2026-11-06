@@ -14,6 +14,8 @@ def page(p):
 posts=[page(p) for p in glob.glob('blog/*/index.html') if p!='blog/index.html']
 posts.sort(key=lambda x:x['date'],reverse=True)
 services=[page(p) for p in sorted(glob.glob('services/*/index.html'))]
+SVN={'ai-enablement':'AI Enablement','branding':'Branding','communications':'Communications','design':'Design','digital-marketing':'Digital Marketing','thought-leadership':'Thought Leadership'}
+for x in services: x['title']=SVN[x['url'].rstrip('/').split('/')[-1]]
 work=[page(p) for p in sorted(glob.glob('work/*/index.html')) if p!='work/index.html']
 
 # ---- llms.txt ----

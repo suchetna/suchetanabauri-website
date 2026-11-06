@@ -29,3 +29,9 @@ and replaces the existing block. Social profiles and bio facts live at the top o
 generated from the pages. After publishing a new post, service or case study, run:
 
     python3 tools/build_feeds.py && python3 tools/add_jsonld.py
+
+## Search engines
+
+- Sitemap: rebuild after adding pages with `python3 tools/build_sitemap.py` (run it after committing, so dates are right).
+- IndexNow key file: `/da26e59ce942459891bec4a444372273.txt`. To tell Bing/Yandex about a new or changed page, open in a browser:
+  `https://api.indexnow.org/indexnow?url=PAGE_URL&key=da26e59ce942459891bec4a444372273`

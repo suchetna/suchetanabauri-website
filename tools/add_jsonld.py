@@ -13,11 +13,12 @@ person={"@type":"Person","@id":PID,"name":"Suchetana Bauri","alternateName":"Suc
  "sameAs":["https://www.linkedin.com/in/suchetanabauri","https://x.com/suchetana_bauri","https://www.instagram.com/suchetanabauri.co/","https://medium.com/@suchetana.bauri","https://github.com/suchetna"]}
 ref={"@id":PID,"@type":"Person","name":"Suchetana Bauri","url":S+"/"}
 website={"@type":"WebSite","@id":WID,"url":S+"/","name":"Suchetana Bauri","inLanguage":"en","publisher":{"@id":PID}}
+SVN={'ai-enablement':'AI Enablement','branding':'Branding','communications':'Communications','design':'Design','digital-marketing':'Digital Marketing','thought-leadership':'Thought Leadership'}
 def services():
     out=[]
     for p in sorted(glob.glob('services/*/index.html')):
         s=open(p,encoding='utf-8').read()
-        out.append((p,meta(s,r'<title>([^<|]*)'),meta(s,r'<meta name="description" content="([^"]*)"'),meta(s,r'<link rel="canonical" href="([^"]*)"')))
+        out.append((p,SVN[p.split('/')[1]],meta(s,r'<meta name="description" content="([^"]*)"'),meta(s,r'<link rel="canonical" href="([^"]*)"')))
     return out
 SV=services()
 biz={"@type":"ProfessionalService","@id":BID,"name":"Suchetana Bauri — Communications, AI enablement and design","url":S+"/",
@@ -52,7 +53,7 @@ for p in glob.glob('**/index.html',recursive=True):
     elif p=='lets-talk/index.html':
         g=[{"@type":"ContactPage","@id":url+"#page","url":url,"name":title,"description":desc,"isPartOf":{"@id":WID},"about":{"@id":PID}}]
     elif p.startswith('services/'):
-        name=title.split(' | ')[0]
+        name=SVN[p.split('/')[1]]
         g=[{"@type":"Service","@id":url+"#service","name":name,"serviceType":name,"description":desc,"url":url,"provider":ref,"areaServed":"Worldwide"}]
     elif p.startswith('work/') and p!='work/index.html':
         g=[{"@type":"CreativeWork","@id":url+"#work","name":title.split(' | ')[0],"description":desc,"url":url,"image":img,"creator":ref}]
