@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <title>Suchetana Bauri — Blog</title>
+  <link>https://suchetanabauri.com/blog/</link>
+  <atom:link href="https://suchetanabauri.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Writing on AI enablement, communication and design by Suchetana Bauri.</description>
+  <language>en</language>
+  <lastBuildDate>Tue, 03 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <item>
+    <title>Your next AI agent should fix a broken workflow, not invent a new job</title>
+    <link>https://suchetanabauri.com/blog/ai-agents-exception-queue/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/ai-agents-exception-queue/</guid>
+    <pubDate>Tue, 03 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>AI Enablement</category>
+    <description>In 2026, enterprises are moving beyond AI that answers questions towards systems that investigate, recommend and act. The opportunity for 2027 is to resolve the work that keeps getting stuck.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-agents.webp" type="image/webp" length="0"/>
+  </item>
+  <item>
+    <title>Your AI strategy is quietly rewriting the rules of work</title>
+    <link>https://suchetanabauri.com/blog/ai-strategy-rules-of-work/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/ai-strategy-rules-of-work/</guid>
+    <pubDate>Tue, 03 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>Communications</category>
+    <description>When AI enters performance reviews, hiring decisions and everyday expectations, a leadership message becomes something more consequential. Before 2027, organisations need to explain the bargain they are asking employees to accept.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-ai-rules.webp" type="image/webp" length="0"/>
+  </item>
+  <item>
+    <title>The interface owes you an explanation</title>
+    <link>https://suchetanabauri.com/blog/interface-owes-you-an-explanation/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/interface-owes-you-an-explanation/</guid>
+    <pubDate>Tue, 03 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>Design</category>
+    <description>The foundational UI/UX thinkers who shape how I approach design, communication and AI: Norman, Nielsen, Shneiderman, Krug, Garrett, Rosenfeld and Morville.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-continue.webp" type="image/webp" length="0"/>
+  </item>
+  <item>
+    <title>I stopped asking AI to write my marketing. I started redesigning the work.</title>
+    <link>https://suchetanabauri.com/blog/redesigning-marketing-work-with-ai/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/redesigning-marketing-work-with-ai/</guid>
+    <pubDate>Tue, 03 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>Digital Marketing</category>
+    <description>How moving from prompts to context, bounded agents and connected workflows changed my digital marketing practice, and why editorial judgement matters more, not less.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-ai-workflow.webp" type="image/webp" length="0"/>
+  </item>
+  <item>
+    <title>Before you change the logo, find out what people think you do</title>
+    <link>https://suchetanabauri.com/blog/rebrand-what-people-think-you-do/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/rebrand-what-people-think-you-do/</guid>
+    <pubDate>Tue, 03 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>Branding</category>
+    <description>A rebrand should close the distance between what a business has become and what people understand it to be. That requires decisions about the business itself.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-rebrand.webp" type="image/webp" length="0"/>
+  </item>
+  <item>
+    <title>Thought leadership is not a writing problem</title>
+    <link>https://suchetanabauri.com/blog/thought-leadership-not-a-writing-problem/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/thought-leadership-not-a-writing-problem/</guid>
+    <pubDate>Tue, 03 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>Thought Leadership</category>
+    <description>What translating research at ISB, specialist knowledge at ELMS and internal communication at Microsoft (via partner) taught me about turning expertise into something people can use.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-expertise.webp" type="image/webp" length="0"/>
+  </item>
+</channel>
+</rss>

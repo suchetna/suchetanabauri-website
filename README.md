@@ -22,3 +22,10 @@ editing a page, regenerate it from the repo root:
 
 It reads each page's title, description, canonical URL, og:image and (for posts) the date and tag,
 and replaces the existing block. Social profiles and bio facts live at the top of the script.
+
+## llms.txt and RSS feed
+
+`llms.txt` (a plain-language summary for AI assistants) and `feed.xml` (the blog's RSS feed) are
+generated from the pages. After publishing a new post, service or case study, run:
+
+    python3 tools/build_feeds.py && python3 tools/add_jsonld.py

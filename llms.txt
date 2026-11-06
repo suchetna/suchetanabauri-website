@@ -1,0 +1,54 @@
+# Suchetana Bauri
+
+> Communications strategist and AI enablement consultant based in Hyderabad, India, with 17+ years in corporate, internal, employee and change communications. She helps organisations make AI useful and adopted well: AI readiness assessments, workflow design, change communication and team enablement, alongside thought leadership, branding, digital marketing and UX/UI design.
+
+Suchetana works remotely with teams worldwide. Education: MA and BA in English Literature (Jadavpur University); PG Certificate in Digital Marketing & Communications (MICA); Google UX Design and Google Digital Marketing & E-commerce certificates.
+
+Contact: hello@suchetanabauri.com
+
+## About
+- [About Suchetana Bauri](https://suchetanabauri.com/about/): Background, experience and approach
+
+## Services
+- [AI Enablement](https://suchetanabauri.com/services/ai-enablement/): Helping teams understand AI and use it in their real work, beyond the rollout: AI adoption communication, role-specific learning, workflow guidance and responsible use.
+- [Branding](https://suchetanabauri.com/services/branding/): Shaping how your brand looks, sounds, and shows up: brand strategy, architecture, verbal and visual identity, guidelines and brand experiences.
+- [Communications](https://suchetanabauri.com/services/communications/): Internal and external messages that are clear, timely and acted on: communication plans, change communication, leadership messages, manager briefings and editorial content.
+- [Design](https://suchetanabauri.com/services/design/): Websites, apps, decks, layouts, and visuals that make complex ideas easy to follow: UX, UI, presentation, editorial, information design and design systems.
+- [Digital Marketing](https://suchetanabauri.com/services/digital-marketing/): Content and campaigns that build an audience: digital marketing strategy, content, SEO, social media, campaigns, email and measurement.
+- [Thought Leadership](https://suchetanabauri.com/services/thought-leadership/): Turning leaders’ expertise into articles and posts people want to read: editorial strategy, interviews, ghostwriting, opinion pieces, LinkedIn posts and newsletters.
+
+## Writing
+- [Your next AI agent should fix a broken workflow, not invent a new job](https://suchetanabauri.com/blog/ai-agents-exception-queue/): In 2026, enterprises are moving beyond AI that answers questions towards systems that investigate, recommend and act. The opportunity for 2027 is to resolve the work that keeps getting stuck.
+- [Your AI strategy is quietly rewriting the rules of work](https://suchetanabauri.com/blog/ai-strategy-rules-of-work/): When AI enters performance reviews, hiring decisions and everyday expectations, a leadership message becomes something more consequential. Before 2027, organisations need to explain the bargain they are asking employees to accept.
+- [The interface owes you an explanation](https://suchetanabauri.com/blog/interface-owes-you-an-explanation/): The foundational UI/UX thinkers who shape how I approach design, communication and AI: Norman, Nielsen, Shneiderman, Krug, Garrett, Rosenfeld and Morville.
+- [I stopped asking AI to write my marketing. I started redesigning the work.](https://suchetanabauri.com/blog/redesigning-marketing-work-with-ai/): How moving from prompts to context, bounded agents and connected workflows changed my digital marketing practice, and why editorial judgement matters more, not less.
+- [Before you change the logo, find out what people think you do](https://suchetanabauri.com/blog/rebrand-what-people-think-you-do/): A rebrand should close the distance between what a business has become and what people understand it to be. That requires decisions about the business itself.
+- [Thought leadership is not a writing problem](https://suchetanabauri.com/blog/thought-leadership-not-a-writing-problem/): What translating research at ISB, specialist knowledge at ELMS and internal communication at Microsoft (via partner) taught me about turning expertise into something people can use.
+
+## Selected work
+- [A film school needs more than a good opening shot](https://suchetanabauri.com/work/aisfm/): Case study: a 2014 WordPress website for AISFM, a film and media school, balancing creative character with a clear structure. Screens recreated from memory.
+- [Common Ground: good design needs something behind it](https://suchetanabauri.com/work/common-ground/): Concept case study: Common Ground, a self-directed website built end to end, connecting copy, content structure, visual design, frontend and backend development.
+- [ELMS Sports Foundation: More than a sporting chance](https://suchetanabauri.com/work/elms/): Bringing physical literacy into focus—and giving parents, educators and school leaders a reason to act: the ELMS Sports Foundation website and newsletter.
+- [The stories could take the scenic route. The navigation couldn’t.](https://suchetanabauri.com/work/elsewhere/): Concept case study: Elsewhere, an India-led travel magazine app concept, and what designing it is teaching me about editorial thinking, navigation and reading states.
+- [Form & Dwell: a website with room to breathe](https://suchetanabauri.com/work/form-and-dwell/): Concept case study: Form & Dwell, a self-directed web design concept exploring visual hierarchy, page composition and how a restrained interface can still have character.
+- [AI, beyond the announcement](https://suchetanabauri.com/work/insurtech-ai-publications/): Case study, insurtech company: an AI Newsletter and monthly AI Digest that turned an AI-first strategy into clear stories and practical learning, with a 35% improvement in digital engagement.
+- [Big ideas. Small screen.](https://suchetanabauri.com/work/isb-insight-app/): Case study: the ISB Insight app, a mobile reading experience for research and institutional insights, designed around content discovery and reading. Screens recreated from memory.
+- [ISB Insight: A publication, not a souvenir](https://suchetanabauri.com/work/isb-insight/): How Suchetana Bauri shaped ISB Insight as Managing Editor: translating management research without dilution, building the app and growing the readership.
+- [Internal comms people actually read](https://suchetanabauri.com/work/microsoft-internal-comms/): Case study, Microsoft (via partner): clearer, faster internal communications for 20,000+ employees, with an 86% improvement in employee engagement and 30% faster turnaround.
+- [Microsoft (via partner): The answer should not require an excavation](https://suchetanabauri.com/work/microsoft/): How Suchetana Bauri approached internal communication for a 20,000+ employee organisation at Microsoft (via partner): useful updates, all-hands and hackathon reports, and colleague stories.
+- [Monocept: The agent should not need an engineering degree](https://suchetanabauri.com/work/monocept/): How Suchetana Bauri explained technically complex insurance workflows, including agentic AI, to the agents and sales teams expected to use them.
+- [The first draft gets a second opinion](https://suchetanabauri.com/work/suchflow/): Case study: Suchflow, a self-reviewing AI workflow that drafts an article manuscript, critiques it against tone, voice and editorial style, and revises it before human review.
+- [A town hall shouldn’t leave people guessing](https://suchetanabauri.com/work/town-hall-toolkits/): Case study, Microsoft (via partner): town hall toolkits and templates that gave company-wide communications a clear purpose, structure and focus on employees.
+
+## Elsewhere
+- [LinkedIn](https://www.linkedin.com/in/suchetanabauri)
+- [X](https://x.com/suchetana_bauri)
+- [Instagram](https://www.instagram.com/suchetanabauri.co/)
+- [Medium](https://medium.com/@suchetana.bauri)
+- [GitHub](https://github.com/suchetna)
+
+## Optional
+- [Blog RSS feed](https://suchetanabauri.com/feed.xml)
+- [Sitemap](https://suchetanabauri.com/sitemap.xml)
+- [Privacy policy](https://suchetanabauri.com/privacy-policy/)
+- [Terms of service](https://suchetanabauri.com/terms-of-service/)
