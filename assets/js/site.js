@@ -463,3 +463,34 @@
   window.addEventListener('pagehide',halt);
   halt();render();
 })();
+
+/* ---- Contact form (Web3Forms) ---- */
+(function(){
+  var f=document.getElementById('ct-form');if(!f)return;
+  var status=document.getElementById('ct-status'),btn=f.querySelector('.ct-send'),sel=document.getElementById('ct-topic');
+  var q=new URLSearchParams(location.search);
+  function done(){f.outerHTML='<div class="ct-done" role="status"><h2>Thank you, your message is on its way.</h2><p>I’ll reply within two working days. If it’s urgent, email <a href="mailto:hello@suchetanabauri.com">hello@suchetanabauri.com</a>.</p></div>'}
+  if(q.get('sent')==='1'){done();return}
+  var t=q.get('topic');
+  if(t&&sel){for(var k=0;k<sel.options.length;k++){if(sel.options[k].getAttribute('data-slug')===t){sel.selectedIndex=k;break}}}
+  function say(msg,err){status.textContent=msg;status.className='ct-status'+(err?' err':'')}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=null;
+    ['name','email','message'].forEach(function(n){
+      var el=f.elements[n],ok=el.value.trim()!==''&&(n!=='email'||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()));
+      el.setAttribute('aria-invalid',ok?'false':'true');if(!ok&&!bad)bad=el;
+    });
+    if(bad){say('Please fill in your name, a valid email and a message.',true);bad.focus();return}
+    if(f.elements.botcheck.checked)return;
+    var key=f.elements.access_key.value;
+    if(!key||key.indexOf('YOUR_')===0){say('The form isn’t connected yet. Please email hello@suchetanabauri.com.',true);return}
+    var data=Object.fromEntries(new FormData(f));delete data.redirect;
+    data.subject='New enquiry: '+(data.topic||'General')+' — '+data.name;data.replyto=data.email;
+    btn.disabled=true;say('Sending…');
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json()})
+      .then(function(j){if(j&&j.success){done();if(window.gtag)gtag('event','generate_lead',{topic:data.topic})}else throw 0})
+      .catch(function(){btn.disabled=false;say('Something went wrong. Please try again, or email hello@suchetanabauri.com.',true)});
+  });
+})();
