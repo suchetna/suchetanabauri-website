@@ -409,10 +409,39 @@
   window.addEventListener('resize',function(){if(window.innerWidth>640&&!m.hidden)set(false)});
 })();
 
+/* ---- Listen to article: recorded narration (British voice) where available ---- */
+(function(){
+  var NARR={'ai-agents-exception-queue':20,'ai-strategy-rules-of-work':20,'interface-owes-you-an-explanation':19,'rebrand-what-people-think-you-do':17,'redesigning-marketing-work-with-ai':21,'thought-leadership-not-a-writing-problem':19};
+  var m=location.pathname.match(/^\/blog\/([a-z0-9-]+)\/?$/),meta=document.querySelector('.ar-meta');
+  if(!m||!NARR[m[1]]||!meta)return;
+  var a=new Audio();a.preload='none';a.src='/assets/audio/'+m[1]+'.mp3';
+  var wrap=document.createElement('div');wrap.className='ar-listen ar-listen-rec';
+  wrap.innerHTML='<button type="button" class="ar-listen-btn"></button><button type="button" class="ar-listen-stop" aria-label="Stop listening" hidden><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg></button><span class="ar-listen-time" aria-live="off"></span><button type="button" class="ar-listen-rate" aria-label="Playback speed" hidden>1×</button>';
+  meta.insertAdjacentElement('afterend',wrap);
+  var btn=wrap.querySelector('.ar-listen-btn'),stop=wrap.querySelector('.ar-listen-stop'),tm=wrap.querySelector('.ar-listen-time'),rate=wrap.querySelector('.ar-listen-rate');
+  var ICON={play:'<path d="M8 5v14l11-7z"/>',pause:'<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>'},rates=[1,1.25,1.5,0.9],ri=0,started=false;
+  function fmt(x){x=Math.max(0,Math.round(x||0));return Math.floor(x/60)+':'+String(x%60).padStart(2,'0')}
+  function render(){
+    var playing=!a.paused&&!a.ended;
+    btn.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24">'+(playing?ICON.pause:ICON.play)+'</svg><span>'+(playing?'Pause':started?'Resume':'Listen to this article')+'</span>';
+    btn.setAttribute('aria-pressed',playing?'true':'false');
+    stop.hidden=!started;rate.hidden=!started;
+    tm.textContent=started&&a.duration?fmt(a.currentTime)+' / '+fmt(a.duration):NARR[m[1]]+' min · narrated';
+  }
+  btn.addEventListener('click',function(){if(a.paused){started=true;a.play();if(window.gtag&&a.currentTime<1)gtag('event','listen_article',{article:m[1]})}else a.pause();render()});
+  stop.addEventListener('click',function(){a.pause();a.currentTime=0;started=false;render()});
+  rate.addEventListener('click',function(){ri=(ri+1)%rates.length;a.playbackRate=rates[ri];rate.textContent=rates[ri]+'×'});
+  ['play','pause','timeupdate','loadedmetadata'].forEach(function(e){a.addEventListener(e,render)});
+  a.addEventListener('ended',function(){started=false;a.currentTime=0;render()});
+  a.addEventListener('error',function(){wrap.remove()});
+  window.addEventListener('pagehide',function(){a.pause()});
+  render();
+})();
+
 /* ---- Listen to article (browser text-to-speech) ---- */
 (function(){
   var body=document.querySelector('.ar-body'),meta=document.querySelector('.ar-meta');
-  if(!body||!meta||!('speechSynthesis' in window)||!window.SpeechSynthesisUtterance)return;
+  if(!body||!meta||document.querySelector('.ar-listen')||!('speechSynthesis' in window)||!window.SpeechSynthesisUtterance)return;
   var synth=window.speechSynthesis,chunks=[],i=0,state='idle',voice=null;
   function txt(el){return (el.textContent||'').replace(/\s+/g,' ').trim()}
   var h1=document.querySelector('.ar-h1'),st=document.querySelector('.ar-stand');

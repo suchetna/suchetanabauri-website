@@ -861,3 +861,9 @@ html[data-theme=dark] #top.sbh .ct-field input,html[data-theme=dark] #top.sbh .c
 #top.sbh .posts-all{text-align:center;margin:36px 0 0}
 #top.sbh .posts-all .more-l{margin:0;font-size:16px;border-bottom:1px solid currentColor;padding-bottom:2px}
 #top.sbh .ct-done .ct-wa{margin-top:18px;font-size:15px}#top.sbh .ct-done .ct-wa:hover svg{transform:translateX(3px)}
+
+#top.sbh .ar-listen-time{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;margin-left:6px;white-space:nowrap}
+#top.sbh .ar-listen-rate{border:1px solid var(--line);background:none;cursor:pointer;font:inherit;font-size:14px;font-weight:500;color:var(--ink);border-radius:999px;padding:7px 12px;min-width:50px}
+#top.sbh .ar-listen-rate:hover{background:var(--chip)}
+#top.sbh .ar-listen-rate[hidden]{display:none}
+#top.sbh .ar-listen-rec{flex-wrap:wrap}
