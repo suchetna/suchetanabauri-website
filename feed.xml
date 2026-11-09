@@ -6,7 +6,17 @@
   <atom:link href="https://suchetanabauri.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Writing on AI enablement, communication and design by Suchetana Bauri.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 03 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <lastBuildDate>Mon, 09 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <item>
+    <title>AI strategy: what is your business for now?</title>
+    <link>https://suchetanabauri.com/blog/ai-strategy-what-is-your-business-for/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/ai-strategy-what-is-your-business-for/</guid>
+    <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>AI Enablement</category>
+    <description>Lessons from Adobe, DBS and Arizona State University on changing what an organisation offers, how it works and what it must protect.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-ai-strategy.webp" type="image/webp" length="0"/>
+  </item>
   <item>
     <title>Your next AI agent should fix a broken workflow, not invent a new job</title>
     <link>https://suchetanabauri.com/blog/ai-agents-exception-queue/</link>
