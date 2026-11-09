@@ -409,9 +409,9 @@
   window.addEventListener('resize',function(){if(window.innerWidth>640&&!m.hidden)set(false)});
 })();
 
-/* ---- Listen to article: recorded narration (British voice) where available ---- */
+/* ---- Listen to article: recorded narration where available ---- */
 (function(){
-  var NARR={'ai-agents-exception-queue':20,'ai-strategy-rules-of-work':20,'interface-owes-you-an-explanation':19,'rebrand-what-people-think-you-do':17,'redesigning-marketing-work-with-ai':21,'thought-leadership-not-a-writing-problem':19,'ai-strategy-what-is-your-business-for':19};
+  var NARR={'ai-agents-exception-queue':19,'ai-strategy-rules-of-work':18,'ai-strategy-what-is-your-business-for':18,'interface-owes-you-an-explanation':18,'rebrand-what-people-think-you-do':15,'redesigning-marketing-work-with-ai':19,'thought-leadership-not-a-writing-problem':18};
   var m=location.pathname.match(/^\/blog\/([a-z0-9-]+)\/?$/),meta=document.querySelector('.ar-meta');
   if(!m||!NARR[m[1]]||!meta)return;
   var a=new Audio();a.preload='none';a.src='/assets/audio/'+m[1]+'.mp3';
