@@ -18,6 +18,7 @@ Contact: hello@suchetanabauri.com or the contact form at https://suchetanabauri.
 - [Thought Leadership](https://suchetanabauri.com/services/thought-leadership/): Turning leaders’ expertise into articles and posts people want to read: editorial strategy, interviews, ghostwriting, opinion pieces, LinkedIn posts and newsletters.
 
 ## Writing
+- [OpenPencil review: not another screen generator](https://suchetanabauri.com/blog/openpencil-review/): I tested OpenPencil on my own design file. An AI agent cleared the contrast findings in seconds, and left the design-system decision behind them on my desk.
 - [AI strategy: what is your business for now?](https://suchetanabauri.com/blog/ai-strategy-what-is-your-business-for/): Lessons from Adobe, DBS and Arizona State University on changing what an organisation offers, how it works and what it must protect.
 - [Your next AI agent should fix a broken workflow, not invent a new job](https://suchetanabauri.com/blog/ai-agents-exception-queue/): In 2026, enterprises are moving beyond AI that answers questions towards systems that investigate, recommend and act. The opportunity for 2027 is to resolve the work that keeps getting stuck.
 - [Your AI strategy is quietly rewriting the rules of work](https://suchetanabauri.com/blog/ai-strategy-rules-of-work/): When AI enters performance reviews, hiring decisions and everyday expectations, a leadership message becomes something more consequential. Before 2027, organisations need to explain the bargain they are asking employees to accept.

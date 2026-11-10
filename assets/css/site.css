@@ -699,6 +699,7 @@ html.has-dot,html.has-dot *{cursor:none !important}
 #top.sbh .ar-ol li{padding-left:40px}
 #top.sbh .cs-note{margin-top:2.2em;padding:16px 20px;border-radius:12px;background:var(--card);font-size:15px;line-height:1.55;color:var(--body);font-style:italic}
 #top.sbh .ar-table td:not(:first-child){white-space:nowrap}
+#top.sbh .ar-table.ar-table-wrap td:not(:first-child){white-space:normal}
 #top.sbh .wk-illo{background:#DEDEDE}
 #top.sbh .sv-proof{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;background:var(--card);border-radius:24px;padding:20px;color:inherit;transition:transform .3s}
 #top.sbh .sv-proof:hover{transform:translateY(-3px)}

@@ -6,7 +6,17 @@
   <atom:link href="https://suchetanabauri.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Writing on AI enablement, communication and design by Suchetana Bauri.</description>
   <language>en</language>
-  <lastBuildDate>Mon, 09 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <lastBuildDate>Tue, 10 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <item>
+    <title>OpenPencil review: not another screen generator</title>
+    <link>https://suchetanabauri.com/blog/openpencil-review/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/openpencil-review/</guid>
+    <pubDate>Tue, 10 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>AI Enablement</category>
+    <description>I tested OpenPencil on my own design file. An AI agent cleared the contrast findings in seconds, and left the design-system decision behind them on my desk.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-openpencil.webp" type="image/webp" length="0"/>
+  </item>
   <item>
     <title>AI strategy: what is your business for now?</title>
     <link>https://suchetanabauri.com/blog/ai-strategy-what-is-your-business-for/</link>
