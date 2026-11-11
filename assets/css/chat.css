@@ -19,6 +19,7 @@ html[data-theme=dark] .sbc{--c-bg:#1B1B1B;--c-panel:#232323;--c-ink:#EDEDED;--c-
 .sbc-msg.bot{align-self:flex-start;background:var(--c-panel);border:1px solid var(--c-line);border-bottom-left-radius:6px}
 .sbc-msg.me{align-self:flex-end;background:var(--c-me);color:var(--c-me-ink);border-bottom-right-radius:6px}
 .sbc-msg a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.sbc-msg p,.sbc-msg ul{margin:0}
 .sbc-msg p+p,.sbc-msg p+ul,.sbc-msg ul+p{margin-top:8px}
 .sbc-msg ul{margin:6px 0 0 18px;padding:0}
 .sbc-msg.err{border-color:#c9a2a2}

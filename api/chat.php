@@ -82,7 +82,7 @@ You are the website assistant on suchetanabauri.com, the consulting website of S
 
 Your job
 - Help visitors understand what Suchetana does, which service fits their need, and relevant case studies or articles, using ONLY the website knowledge below. Link to the relevant page using its full URL.
-- When a visitor wants to work with her, hire her, get a quote, book a call or discuss a project, ask for what is missing: their name, email address, and a sentence on what they need (organisation, timeline and budget are optional; don't insist). Ask for one or two things at a time. Once you have at least a name, a valid-looking email and the need, call capture_lead exactly once, then tell them Suchetana will reply personally, usually within one working day.
+- When a visitor wants to work with her, hire her, get a quote, book a call or discuss a project, ask for what is missing: their name, email address, and a sentence on what they need (organisation, timeline and budget are optional; don't insist). Ask for one or two things at a time. Once you have at least a name, a valid-looking email and the need, call capture_lead exactly once, then tell them Suchetana will reply personally, within two working days.
 - She is also open to suitable full-time roles; recruiters can be treated like any other lead.
 
 Rules
@@ -147,7 +147,7 @@ function claude(array $CFG, array $payload): array {
 // Offline test double, used when 'mock' => true in the config.
 function mock_claude(array $p): array {
     $last = end($p['messages']);
-    if (is_array($last['content'])) return ['stop_reason' => 'end_turn', 'content' => [['type' => 'text', 'text' => 'Thank you. I’ve passed your details to Suchetana, and she’ll reply personally, usually within one working day.']]];
+    if (is_array($last['content'])) return ['stop_reason' => 'end_turn', 'content' => [['type' => 'text', 'text' => 'Thank you. I’ve passed your details to Suchetana, and she’ll reply personally, within two working days.']]];
     $t = strtolower((string)$last['content']);
     if (isset($p['tools']) && preg_match('/[\w.+-]+@[\w-]+\.[\w.]+/', $t, $m)) {
         return ['stop_reason' => 'tool_use', 'content' => [['type' => 'tool_use', 'id' => 'toolu_mock', 'name' => 'capture_lead', 'input' => ['name' => 'Test Visitor', 'email' => $m[0], 'service' => 'AI Enablement', 'need' => 'Test enquiry: ' . $t]]]];
@@ -204,7 +204,7 @@ function handle_lead(array $CFG, string $PRIVATE, array $lead, array $msgs, stri
 
     // 4. Acknowledge the visitor
     if (!empty($CFG['send_ack_email']) && empty($CFG['mock'])) {
-        $ack = "Hi {$lead['name']},\n\nThank you for getting in touch through suchetanabauri.com. I’ve received your note:\n\n“{$lead['need']}”\n\nI’ll reply personally, usually within one working day.\n\nWarm regards,\nSuchetana Bauri\nhttps://suchetanabauri.com\n\n(This confirmation was sent automatically by my website assistant.)";
+        $ack = "Hi {$lead['name']},\n\nThank you for getting in touch through suchetanabauri.com. I’ve received your note:\n\n“{$lead['need']}”\n\nI’ll reply personally, within two working days.\n\nWarm regards,\nSuchetana Bauri\nhttps://suchetanabauri.com\n\n(This confirmation was sent automatically by my website assistant.)";
         @mail($lead['email'], '=?UTF-8?B?' . base64_encode('Thanks for getting in touch — Suchetana Bauri') . '?=', $ack, "From: Suchetana Bauri <{$from}>\r\nReply-To: {$CFG['notify_to']}\r\nContent-Type: text/plain; charset=UTF-8");
     }
     return ['ok' => true, 'saved' => true, 'notified' => (bool)$sent];
