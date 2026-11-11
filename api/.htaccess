@@ -1,0 +1,4 @@
+# Only chat.php is reachable from the web; the knowledge file is read by PHP, not served.
+<FilesMatch "\.(txt|md|json|csv)$">
+  Require all denied
+</FilesMatch>

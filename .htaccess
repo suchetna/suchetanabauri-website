@@ -12,6 +12,9 @@ RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteCond %{HTTP_HOST} ^(?:www\.)?(suchetanabauri\.com)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
+# Maintenance scripts are not for the web
+RewriteRule ^tools/ - [F,L]
+
 # Old test-site folder -> home page
 RewriteRule ^new(/.*)?$ / [L,R=301]
 
