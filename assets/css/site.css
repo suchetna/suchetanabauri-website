@@ -56,7 +56,7 @@
 #top.sbh .about p.big{font-size:clamp(24px,2.9vw,42px);line-height:1.35;letter-spacing:-.015em;max-width:1120px;margin:40px auto 0;font-weight:400}
 
 /* ---------- Employers ---------- */
-#top.sbh .emp{display:grid;grid-template-columns:minmax(300px,560px) minmax(0,1fr);gap:40px;align-items:center;width:100%;max-width:1300px;margin:0 auto;padding:0 20px 0 60px}
+#top.sbh .emp{display:grid;grid-template-columns:minmax(300px,560px) minmax(0,1fr);gap:40px;align-items:center;width:100%;width:min(1280px,100% - 40px);margin:0 auto}
 #top.sbh .emp p.small{color:var(--body);font-size:18px;line-height:1.65;margin-top:18px;max-width:470px}
 #top.sbh .marq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 #top.sbh .track{display:flex;gap:20px;width:max-content;animation:sbh-marq 40s linear infinite}
@@ -223,7 +223,7 @@
   #top.sbh .nav .btn{padding:8px 18px;font-size:14px}
   #top.sbh .split,#top.sbh .case,#top.sbh .ach,#top.sbh .tst{grid-template-columns:1fr;gap:28px}
   #top.sbh .case.flip .ccard{order:2}
-  #top.sbh .emp{grid-template-columns:1fr;gap:32px;padding:0 20px}
+  #top.sbh .emp{grid-template-columns:1fr;gap:32px}
   #top.sbh .emp p.small{font-size:16px}
   #top.sbh .grid2,#top.sbh .posts{grid-template-columns:1fr}
   #top.sbh .grid3{grid-template-columns:1fr 1fr}
