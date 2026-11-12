@@ -121,6 +121,10 @@ Summary: When AI enters performance reviews, hiring decisions and everyday expec
 URL: https://suchetanabauri.com/blog/ai-strategy-what-is-your-business-for/
 Summary: Lessons from Adobe, DBS and Arizona State University on changing what an organisation offers, how it works and what it must protect.
 
+## Brand strategy for 2027: what 2026 is teaching us
+URL: https://suchetanabauri.com/blog/brand-strategy-2027/
+Summary: AI can help a brand produce, personalise and appear everywhere. The harder task is remaining worth choosing. What the 2026 evidence suggests brands should prepare for next year.
+
 ## From digital marketing to AI-first: beyond faster content
 URL: https://suchetanabauri.com/blog/digital-marketing-to-ai-first/
 Summary: What I learned from AI marketing pioneers, and why the real improvement came from redesigning the work, not collecting more tools.

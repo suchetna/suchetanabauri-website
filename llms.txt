@@ -18,6 +18,7 @@ Contact: hello@suchetanabauri.com or the contact form at https://suchetanabauri.
 - [Thought Leadership](https://suchetanabauri.com/services/thought-leadership/): Turning leaders’ expertise into articles and posts people want to read: editorial strategy, interviews, ghostwriting, opinion pieces, LinkedIn posts and newsletters.
 
 ## Writing
+- [Brand strategy for 2027: what 2026 is teaching us](https://suchetanabauri.com/blog/brand-strategy-2027/): AI can help a brand produce, personalise and appear everywhere. The harder task is remaining worth choosing. What the 2026 evidence suggests brands should prepare for next year.
 - [From digital marketing to AI-first: beyond faster content](https://suchetanabauri.com/blog/digital-marketing-to-ai-first/): What I learned from AI marketing pioneers, and why the real improvement came from redesigning the work, not collecting more tools.
 - [OpenPencil review: not another screen generator](https://suchetanabauri.com/blog/openpencil-review/): I tested OpenPencil on my own design file. An AI agent cleared the contrast findings in seconds, and left the design-system decision behind them on my desk.
 - [AI strategy: what is your business for now?](https://suchetanabauri.com/blog/ai-strategy-what-is-your-business-for/): Lessons from Adobe, DBS and Arizona State University on changing what an organisation offers, how it works and what it must protect.
