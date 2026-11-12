@@ -52,6 +52,8 @@ for p in glob.glob('**/index.html',recursive=True):
         g=[{"@type":"Blog","@id":S+"/blog/#blog","url":url,"name":title,"description":desc,"author":ref,"blogPost":posts}]
     elif p=='lets-talk/index.html':
         g=[{"@type":"ContactPage","@id":url+"#page","url":url,"name":title,"description":desc,"isPartOf":{"@id":WID},"about":{"@id":PID}}]
+    elif p=='services/index.html':
+        g=[{"@type":"CollectionPage","@id":url+"#page","url":url,"name":title,"description":desc,"isPartOf":{"@id":WID},"about":{"@id":PID}}]
     elif p.startswith('services/'):
         name=SVN[p.split('/')[1]]
         g=[{"@type":"Service","@id":url+"#service","name":name,"serviceType":name,"description":desc,"url":url,"provider":ref,"areaServed":"Worldwide"}]

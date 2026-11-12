@@ -891,3 +891,76 @@ html[data-theme=dark] #top.sbh .ct-field input,html[data-theme=dark] #top.sbh .c
 #top.sbh .ar-sheet .ws-dl svg{width:18px;height:18px}
 @media (max-width:640px){#top.sbh .ar-sheet{padding:22px 18px 20px}#top.sbh .ar-sheet ol{grid-template-columns:1fr}}
 @media print{#top.sbh .ar-sheet .ws-dl{display:none}}
+
+/* Hero promise and actions (audit, 12 Nov 2026) */
+#top.sbh .hero-intro{position:relative;z-index:2;max-width:760px;margin:-7.5vw auto 0;padding:0 20px;text-align:center}
+#top.sbh .hero-intro .hi-role{display:inline-block;font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--label);background:var(--chip);padding:8px 14px;border-radius:999px}
+#top.sbh .hero-intro .hi-promise{font-size:clamp(28px,3.2vw,44px);font-weight:500;letter-spacing:-.03em;line-height:1.1;margin-top:18px}
+#top.sbh .hero-intro .hi-sub{font-size:clamp(16px,1.3vw,19px);line-height:1.55;color:var(--body);margin:16px auto 0;max-width:620px}
+#top.sbh .hero-intro .hi-cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 26px;margin-top:26px}
+#top.sbh .hero-intro .btn.hi-1{margin:0;font-size:16px;padding:14px 26px}
+#top.sbh .hero-intro .hi-2{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:16px;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+#top.sbh .hero-intro .hi-2 svg{width:17px;height:17px}
+#top.sbh .hero-intro .hi-note{font-size:13.5px;color:var(--muted);margin-top:14px}
+#top.sbh .hero-intro .hero-pills-m{padding:22px 0 0}
+#top.sbh .hero-pills-m a{background:#DEDEDE;color:#333;font-size:13px;padding:7px 13px;border-radius:999px;transition:background .2s,color .2s}
+#top.sbh .hero-pills-m a:hover,#top.sbh .hero-pills-m a:focus-visible{background:var(--ink);color:var(--bg)}
+html[data-theme=dark] #top.sbh .hero-pills-m a{background:var(--chip);color:var(--label)}
+@media (max-width:900px){#top.sbh .hero-intro{margin-top:8px}}
+@media (min-width:901px){
+  #top.sbh .hero{width:min(100%,1440px,calc((100svh - 250px) * 1.5652));min-width:900px}
+  #top.sbh .hero-intro{margin-top:-56px}
+  #top.sbh .hero-intro .hi-promise{margin-top:14px}
+  #top.sbh .hero-intro .hi-sub{margin-top:10px}
+  #top.sbh .hero-intro .hi-cta{margin-top:20px}
+}
+#top.sbh .hero-intro .hi-sub{margin-top:18px}
+#top.sbh .hero-intro .hi-note{margin-top:10px}
+@media (min-width:901px){#top.sbh .hero .pill,#top.sbh .hero .sticker{font-size:max(12px,1.05cqw)}}
+
+/* Work page groups (audit, 12 Nov 2026) */
+#top.sbh .wk-jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}
+#top.sbh .wk-jump a{font-size:14px;background:var(--card);border:1px solid var(--line);padding:9px 14px;border-radius:999px}
+#top.sbh .wk-jump a:hover{background:var(--ink);color:var(--bg)}
+#top.sbh .wk-group{margin:72px 0 28px;padding-top:28px;border-top:1px solid var(--line);scroll-margin-top:90px}
+#top.sbh .wk-group:first-of-type{margin-top:40px}
+#top.sbh .wk-gh{font-size:clamp(26px,2.6vw,34px);font-weight:500;letter-spacing:-.02em}
+#top.sbh .wk-gp{color:var(--body);margin-top:8px;max-width:640px;line-height:1.55}
+#top.sbh .cs-related{max-width:760px;margin-top:56px;padding:22px 24px;background:var(--card);border-radius:16px}
+#top.sbh .cs-related h2{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#top.sbh .cs-related ul{list-style:none;margin-top:10px;display:grid;gap:8px}
+#top.sbh .cs-related li{color:var(--body);line-height:1.5}
+#top.sbh .cs-related a{color:var(--ink);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+
+/* Service pages: at a glance (audit, 12 Nov 2026) */
+#top.sbh .sv-glance{padding-top:56px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+#top.sbh .sv-glance .g-col{background:var(--card);border-radius:16px;padding:22px 22px 24px}
+#top.sbh .sv-glance h2{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#top.sbh .sv-glance p,#top.sbh .sv-glance li{font-size:15.5px;line-height:1.55;color:var(--body);margin-top:10px}
+#top.sbh .sv-glance .g-col:first-child p{font-size:19px;line-height:1.4;color:var(--ink);font-weight:500;letter-spacing:-.01em}
+#top.sbh .sv-glance ul{list-style:none}
+#top.sbh .sv-glance ul li{padding-left:16px;position:relative;margin-top:8px}
+#top.sbh .sv-glance ul li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+#top.sbh .sv-glance .g-rel li::before{display:none}
+#top.sbh .sv-glance .g-rel li{padding-left:0}
+#top.sbh .sv-glance .g-rel a,#top.sbh .sv-glance .g-link{color:var(--ink);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+#top.sbh .sv-glance .g-rel span{color:var(--muted);font-size:13.5px}
+#top.sbh .sv-glance .g-link{display:inline-block;margin-top:12px;font-size:15px}
+@media (max-width:1100px){#top.sbh .sv-glance{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){#top.sbh .sv-glance{grid-template-columns:1fr;padding-top:36px}
+  #top.sbh .sv-vis{max-width:200px;min-width:0;margin-top:-6px}}
+/* Keep essential copy at a stable, readable colour */
+#top.sbh.js [data-words] .w{opacity:1}
+#top.sbh .sv-pick{padding-top:80px;max-width:900px}
+#top.sbh .sv-pick .ar-table td:first-child a{text-decoration:underline;text-underline-offset:3px}
+#top.sbh .sv-pick .sv-start{color:var(--body);line-height:1.6;margin-top:24px;max-width:680px}
+#top.sbh .sv-pick .sv-start strong{color:var(--ink);font-weight:500}
+/* Desktop overflow fix: body has no margin, so the wrapper no longer needs 100vw (which included the scrollbar) */
+#top.sbh{width:auto;margin-left:0}
+#top.sbh .ar-cta .ar-cta-2{font-size:15px;color:var(--body);margin-top:14px}
+#top.sbh .ar-cta .ar-cta-2 a{color:var(--ink);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+#top.sbh.js [data-words] .w.on,#top.sbh.js.sv-page [data-words] .w,#top.sbh.js.sv-page [data-words] .w.on{opacity:1}
+#top.sbh .sv-pick .btn{display:inline-block;font-size:16px;padding:14px 26px;margin-top:22px}
+#top.sbh .sv-glance{grid-template-columns:1fr 1fr}
+@media (min-width:1200px){#top.sbh .sv-glance{max-width:1100px}}
+@media (max-width:640px){#top.sbh .sv-glance{grid-template-columns:1fr}}
