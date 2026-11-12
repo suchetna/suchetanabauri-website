@@ -869,3 +869,25 @@ html[data-theme=dark] #top.sbh .ct-field input,html[data-theme=dark] #top.sbh .c
 #top.sbh .ar-listen-rate:hover{background:var(--chip)}
 #top.sbh .ar-listen-rate[hidden]{display:none}
 #top.sbh .ar-listen-rec{flex-wrap:wrap}
+
+/* Article worksheet block */
+#top.sbh .ar-sheet{margin:2em 0 1.6em;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 30px 26px}
+#top.sbh .ar-sheet .ws-k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+#top.sbh .ar-sheet h3{font-size:clamp(24px,2.6vw,30px);font-weight:500;letter-spacing:-.02em;line-height:1.15;margin-top:10px}
+#top.sbh .ar-sheet .ws-sub{color:var(--body);margin-top:6px;font-size:16px}
+#top.sbh .ar-sheet ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+#top.sbh .ar-sheet li{background:var(--bg);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+#top.sbh .ar-sheet li b{flex:none;width:32px;height:32px;border-radius:8px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:13px;font-weight:600}
+#top.sbh .ar-sheet li strong{display:block;font-weight:500;font-size:16px}
+#top.sbh .ar-sheet li span{display:block;color:var(--body);font-size:14.5px;line-height:1.45;margin-top:3px}
+#top.sbh .ar-sheet .ws-run{margin-top:20px;font-size:15px}
+#top.sbh .ar-sheet .ws-run b{font-weight:500}
+#top.sbh .ar-sheet .ws-run ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:8px;color:var(--body)}
+#top.sbh .ar-sheet .ws-run li{all:unset;display:flex;align-items:center;gap:8px}
+#top.sbh .ar-sheet .ws-run li::before{content:"";width:13px;height:13px;border:1.5px solid var(--ink);border-radius:3px}
+#top.sbh .ar-sheet .ws-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+#top.sbh .ar-sheet .ws-foot p{font-family:var(--serif);font-style:italic;font-size:19px;margin:0}
+#top.sbh .ar-sheet .ws-dl{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);font-weight:500;font-size:15px;padding:12px 22px;border-radius:999px;text-decoration:none}
+#top.sbh .ar-sheet .ws-dl svg{width:18px;height:18px}
+@media (max-width:640px){#top.sbh .ar-sheet{padding:22px 18px 20px}#top.sbh .ar-sheet ol{grid-template-columns:1fr}}
+@media print{#top.sbh .ar-sheet .ws-dl{display:none}}
