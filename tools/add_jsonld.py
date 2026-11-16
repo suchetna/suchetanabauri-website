@@ -34,11 +34,6 @@ for p in glob.glob('**/index.html',recursive=True):
     title=meta(s,r'<title>([^<]*)'); img=meta(s,r'<meta property="og:image" content="([^"]*)"')
     if p=='index.html':
         g=[website,person,biz]
-        qa=[]
-        for q,a in re.findall(r'<details[^>]*><summary>(.*?)<svg.*?</summary>(.*?)</details>',s,re.S):
-            a=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',a)).strip()
-            if q.strip() and a: qa.append({"@type":"Question","name":html.unescape(q.strip()),"acceptedAnswer":{"@type":"Answer","text":html.unescape(a)}})
-        if qa: g.append({"@type":"FAQPage","@id":S+"/#faq","mainEntity":qa,"isPartOf":{"@id":WID}})
     elif p=='about/index.html': g=[website,person,{"@type":"ProfilePage","@id":url+"#page","url":url,"name":title,"mainEntity":{"@id":PID},"isPartOf":{"@id":WID}}]
     elif p.startswith('blog/') and p!='blog/index.html':
         h1=meta(s,r'<h1 class="ar-h1">(.*?)</h1>'); h1=re.sub('<[^>]+>','',h1) if h1 else title.split(' | ')[0]
@@ -70,6 +65,13 @@ for p in glob.glob('**/index.html',recursive=True):
     else:
         g=[{"@type":"WebPage","@id":url+"#page","url":url,"name":title,"description":desc,"isPartOf":{"@id":WID},"author":ref}] if url else None
     if not g: continue
+    # Any page with a visible FAQ (<div class="faq">) also gets FAQPage data built from it
+    if 'class="faq' in s:
+        qa=[]
+        for q,a in re.findall(r'<details[^>]*><summary>(.*?)<svg.*?</summary>(.*?)</details>',s,re.S):
+            a=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',a)).strip()
+            if q.strip() and a: qa.append({"@type":"Question","name":html.unescape(q.strip()),"acceptedAnswer":{"@type":"Answer","text":html.unescape(a)}})
+        if qa: g.append({"@type":"FAQPage","@id":(url or S+"/")+"#faq","mainEntity":qa,"isPartOf":{"@id":WID}})
     g=[{k:v for k,v in n.items() if v} for n in g]
     blk='<script type="application/ld+json" id="ld">'+json.dumps(graph(g),ensure_ascii=False,separators=(',',':'))+'</script>'
     s=s.replace('</head>',blk+'\n</head>',1); open(p,'w',encoding='utf-8').write(s); done+=1
