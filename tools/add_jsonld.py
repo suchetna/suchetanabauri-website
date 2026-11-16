@@ -57,6 +57,8 @@ for p in glob.glob('**/index.html',recursive=True):
     elif p.startswith('services/'):
         name=SVN[p.split('/')[1]]
         g=[{"@type":"Service","@id":url+"#service","name":name,"serviceType":name,"description":desc,"url":url,"provider":ref,"areaServed":"Worldwide"}]
+    elif p=='ai-readiness/index.html':
+        g=[{"@type":"WebApplication","@id":url+"#app","name":"AI Readiness Check","description":desc,"url":url,"applicationCategory":"BusinessApplication","operatingSystem":"Any","isAccessibleForFree":True,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"creator":ref,"isPartOf":{"@id":WID}}]
     elif p.startswith('work/') and p!='work/index.html':
         g=[{"@type":"CreativeWork","@id":url+"#work","name":title.split(' | ')[0],"description":desc,"url":url,"image":img,"creator":ref}]
     else:
