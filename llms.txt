@@ -45,6 +45,9 @@ Contact: hello@suchetanabauri.com or the contact form at https://suchetanabauri.
 - [The first draft gets a second opinion](https://suchetanabauri.com/work/suchflow/): Case study: Suchflow, a self-reviewing AI workflow that drafts an article manuscript, critiques it against tone, voice and editorial style, and revises it before human review.
 - [A town hall shouldn’t leave people guessing](https://suchetanabauri.com/work/town-hall-toolkits/): Case study, Microsoft (via partner): town hall toolkits and templates that gave company-wide communications a clear purpose, structure and focus on employees.
 
+## Free tools
+- [AI Readiness Check](https://suchetanabauri.com/ai-readiness/): A free 12-question check of an organisation's readiness for AI across six areas (leadership, people, use cases, tools and information, responsible use, communication and change), with a score and three practical first moves.
+
 ## Elsewhere
 - [LinkedIn](https://www.linkedin.com/in/suchetanabauri)
 - [X](https://x.com/suchetana_bauri)

@@ -36,7 +36,7 @@ RewriteRule ^s-chand-publishing-project-delivery/?$ /work/ [NE,L,R=301]
 RewriteRule ^aisfm-institutional-storytelling-case-study/?$ /work/ [NE,L,R=301]
 RewriteRule ^monocept-ai-transformation-communications-case-study/?$ /work/monocept/ [NE,L,R=301]
 RewriteRule ^elms-ecosystem-engagement-case-study/?$ /work/elms/ [NE,L,R=301]
-RewriteRule ^ai-readiness-audit-product-organisation/?$ /blog/ [NE,L,R=301]
+RewriteRule ^ai-readiness-audit-product-organisation/?$ /ai-readiness/ [NE,L,R=301]
 RewriteRule ^ai-use-case-prioritisation-product-teams/?$ /blog/ [NE,L,R=301]
 RewriteRule ^human-led-ai-content-workflow/?$ /blog/ [NE,L,R=301]
 RewriteRule ^ai-customer-success-operating-model/?$ /blog/ [NE,L,R=301]
@@ -61,22 +61,22 @@ RewriteRule ^i-adoption-communication-challenge/?$ /blog/ [NE,L,R=301]
 RewriteRule ^ai-storytelling-for-adoption/?$ /blog/ [NE,L,R=301]
 RewriteRule ^enterprise-ai-adoption-fails/?$ /blog/ [NE,L,R=301]
 RewriteRule ^ai-rollout-not-adoption/?$ /blog/ [NE,L,R=301]
-RewriteRule ^ai-organisational-readiness/?$ /blog/ [NE,L,R=301]
+RewriteRule ^ai-organisational-readiness/?$ /ai-readiness/ [NE,L,R=301]
 RewriteRule ^manager-enablement-ai-adoption/?$ /blog/ [NE,L,R=301]
 RewriteRule ^leaders-address-ai-job-anxiety/?$ /blog/ [NE,L,R=301]
 RewriteRule ^digital-transformation-communication-system/?$ /blog/ [NE,L,R=301]
 RewriteRule ^change-communication-strategy-digital-transformation/?$ /blog/ [NE,L,R=301]
-RewriteRule ^ai-readiness-audit/?$ /blog/ [NE,L,R=301]
+RewriteRule ^ai-readiness-audit/?$ /ai-readiness/ [NE,L,R=301]
 RewriteRule ^town-hall-not-change-strategy/?$ /blog/ [NE,L,R=301]
 RewriteRule ^build-lasting-ai-capability/?$ /blog/ [NE,L,R=301]
-RewriteRule ^measure-ai-adoption/?$ /blog/ [NE,L,R=301]
+RewriteRule ^measure-ai-adoption/?$ /blog/ai-adoption-dashboard-green/ [NE,L,R=301]
 RewriteRule ^ai-rollout-is-not-ai-adoption/?$ /blog/ [NE,L,R=301]
-RewriteRule ^organisational-readiness-technology-launch/?$ /blog/ [NE,L,R=301]
+RewriteRule ^organisational-readiness-technology-launch/?$ /ai-readiness/ [NE,L,R=301]
 RewriteRule ^ai-vendor-risk-checklist/?$ /blog/ [NE,L,R=301]
 RewriteRule ^ai-business-case-cfos/?$ /blog/ [NE,L,R=301]
 RewriteRule ^ai-workplace-transformation-workflow-redesign/?$ /blog/ [NE,L,R=301]
 RewriteRule ^redesigning-ai-hiring-funnel/?$ /blog/ [NE,L,R=301]
-RewriteRule ^ai-maturity-framework/?$ /blog/ [NE,L,R=301]
+RewriteRule ^ai-maturity-framework/?$ /ai-readiness/ [NE,L,R=301]
 RewriteRule ^ai-risk-accountability/?$ /blog/ [NE,L,R=301]
 RewriteRule ^shadow-ai-governance/?$ /blog/ [NE,L,R=301]
 RewriteRule ^ai-assisted-underwriting-workflow-redesign/?$ /blog/ [NE,L,R=301]
@@ -107,4 +107,14 @@ ExpiresByType text/html "access plus 5 minutes"
 ExpiresByType text/css "access plus 1 year"
 ExpiresByType application/javascript "access plus 1 year"
 ExpiresByType image/webp "access plus 6 months"
+ExpiresByType image/png "access plus 6 months"
+ExpiresByType image/jpeg "access plus 6 months"
+ExpiresByType image/svg+xml "access plus 6 months"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType audio/mpeg "access plus 6 months"
+</IfModule>
+
+# Compress text files for faster loading
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript text/xml application/xml application/rss+xml text/plain image/svg+xml application/json application/ld+json
 </IfModule>
