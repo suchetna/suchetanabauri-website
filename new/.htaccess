@@ -1,0 +1,6 @@
+# The old preview site (new.suchetanabauri.com, folder public_html/new) now lives at suchetanabauri.com.
+# Send every request, with its path, to the same page on the main site.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)$ https://suchetanabauri.com/$1 [R=301,L]
+</IfModule>
