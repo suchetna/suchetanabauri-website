@@ -974,3 +974,30 @@ html[data-theme=dark] #top.sbh .hero-pills-m a{background:var(--chip);color:var(
   #top.sbh .ar-table.ar-table-wrap td:first-child{font-size:17px}
   #top.sbh .ar-table.ar-table-wrap td[data-label]::before{content:attr(data-label) ": ";font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--label);display:block;margin-top:6px}
 }
+
+/* Free resource download box (17 Nov 2026) */
+#top.sbh .dl-box{margin:2.2em 0 1.8em;display:grid;grid-template-columns:1.1fr 1fr;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;scroll-margin-top:90px}
+#top.sbh .dl-box .dl-k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+#top.sbh .dl-box h3{font-size:clamp(22px,2.3vw,28px);font-weight:500;letter-spacing:-.02em;line-height:1.15;margin:10px 0 0}
+#top.sbh .dl-box .dl-txt p{font-size:15.5px;line-height:1.55;color:var(--body);margin-top:10px}
+#top.sbh .dl-box ul{list-style:none;margin:12px 0 0;padding:0}
+#top.sbh .dl-box ul li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.5;color:var(--body);margin-top:6px}
+#top.sbh .dl-box ul li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+#top.sbh .dl-form form{display:grid;gap:12px}
+#top.sbh .dl-form label{display:grid;gap:6px;font-size:13.5px;font-weight:500;color:var(--ink)}
+#top.sbh .dl-form label span{font-weight:400;color:var(--muted)}
+#top.sbh .dl-form input[type=text],#top.sbh .dl-form input[type=email]{font:inherit;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+#top.sbh .dl-form input:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+#top.sbh .dl-form .btn{margin:4px 0 0;justify-self:start;font-size:15.5px;padding:13px 24px;border:0;cursor:pointer}
+#top.sbh .dl-form .btn:disabled{opacity:.6;cursor:default}
+#top.sbh .dl-form .dl-err{color:#B3261E;font-size:13.5px;min-height:0;margin:0}
+html[data-theme=dark] #top.sbh .dl-form .dl-err{color:#F2B8B5}
+#top.sbh .dl-form .dl-priv,#top.sbh .dl-done .dl-note{font-size:12.5px;line-height:1.5;color:var(--muted);margin:0}
+#top.sbh .dl-form .dl-priv a,#top.sbh .dl-done a:not(.btn){color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+#top.sbh .dl-done{display:grid;gap:12px;align-content:start}
+#top.sbh .dl-done[hidden]{display:none}
+#top.sbh .dl-done h4{font-size:19px;font-weight:500;letter-spacing:-.01em}
+#top.sbh .dl-done .btn{justify-self:start;margin:0;font-size:15px;padding:12px 22px}
+@media (max-width:760px){#top.sbh .dl-box{grid-template-columns:1fr;padding:22px 18px;gap:20px}}
+#top.sbh .dl-form label b{font-weight:500}
+#top.sbh .dl-form form[hidden]{display:none}
