@@ -10,6 +10,11 @@
   } else { els.forEach(function(el){el.classList.add('in');}); }
 
   // Words darken as you scroll (any element with data-words; keeps <em>, <br> etc.)
+  // Articles, case studies and index pages get it automatically: standfirsts, ledes,
+  // pull quotes and closing CTA headings. Body paragraphs stay plain for easy reading.
+  root.querySelectorAll('.ar-stand, .lede, .wk-gp, .ar-body blockquote, .ar-cta h2').forEach(function(el){
+    if(!el.closest('[data-words]')) el.setAttribute('data-words','');
+  });
   root.querySelectorAll('[data-words]').forEach(function(p){
     var walk=document.createTreeWalker(p,NodeFilter.SHOW_TEXT),nodes=[],n;
     while((n=walk.nextNode()))nodes.push(n);
@@ -24,6 +29,19 @@
       t.parentNode.replaceChild(f,t);
     });
     var spans=p.querySelectorAll('.w');
+    // Already on screen when the page opens (e.g. a standfirst under the headline):
+    // reveal over a moment instead, since there is no scroll to drive it.
+    if(!reduce && !root.classList.contains('sv-page') && p.getBoundingClientRect().top < window.innerHeight*0.85){
+      var dur=Math.min(1800,Math.max(700,spans.length*40)), t0=null;
+      var step=function(ts){
+        if(t0===null) t0=ts;
+        var k=Math.round(Math.min(1,(ts-t0)/dur)*spans.length);
+        spans.forEach(function(s,i){s.classList.toggle('on',i<k);});
+        if(k<spans.length) requestAnimationFrame(step);
+      };
+      setTimeout(function(){requestAnimationFrame(step);},250);
+      return;
+    }
     var paint=function(){
       var r=p.getBoundingClientRect(), vh=window.innerHeight;
       var prog=reduce?1:Math.min(1,Math.max(0,(vh*0.85-r.top)/(r.height+vh*0.35)));
