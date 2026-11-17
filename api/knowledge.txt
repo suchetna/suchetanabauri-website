@@ -137,6 +137,10 @@ Summary: What I learned from AI marketing pioneers, and why the real improvement
 URL: https://suchetanabauri.com/blog/interface-owes-you-an-explanation/
 Summary: The foundational UI/UX thinkers who shape how I approach design, communication and AI: Norman, Nielsen, Shneiderman, Krug, Garrett, Rosenfeld and Morville.
 
+## Not every AI communication gap is a communication problem
+URL: https://suchetanabauri.com/blog/not-every-ai-communication-gap/
+Summary: Leaders have explained the AI strategy. Employees are still asking what they are allowed to do on Monday. Before commissioning another campaign, find out…
+
 ## OpenPencil review: not another screen generator
 URL: https://suchetanabauri.com/blog/openpencil-review/
 Summary: I tested OpenPencil on my own design file. An AI agent cleared the contrast findings in seconds, and left the design-system decision behind them on my desk.
