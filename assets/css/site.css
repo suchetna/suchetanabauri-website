@@ -963,3 +963,14 @@ html[data-theme=dark] #top.sbh .hero-pills-m a{background:var(--chip);color:var(
 @media (max-width:640px){#top.sbh .sv-glance{grid-template-columns:1fr}}
 #top.sbh .hero-intro .hi-cta{margin-top:18px}
 @media (min-width:901px){#top.sbh .hero{width:min(100%,1440px,calc((100svh - 170px) * 1.5652))}#top.sbh .hero-intro{margin-top:-40px}}
+/* Wide text tables: wrap on desktop, stack into cards on phones (17 Nov 2026) */
+#top.sbh .ar-table.ar-table-wrap{overflow-x:visible}
+#top.sbh .ar-table.ar-table-wrap td,#top.sbh .ar-table.ar-table-wrap th{white-space:normal}
+#top.sbh .ar-table.ar-table-wrap td:first-child{width:auto;min-width:120px}
+@media (max-width:640px){
+  #top.sbh .ar-table.ar-table-wrap thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  #top.sbh .ar-table.ar-table-wrap tr{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  #top.sbh .ar-table.ar-table-wrap td{display:block;border:0;padding:3px 0;width:auto}
+  #top.sbh .ar-table.ar-table-wrap td:first-child{font-size:17px}
+  #top.sbh .ar-table.ar-table-wrap td[data-label]::before{content:attr(data-label) ": ";font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--label);display:block;margin-top:6px}
+}
