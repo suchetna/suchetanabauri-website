@@ -12,7 +12,11 @@ person={"@type":"Person","@id":PID,"name":"Suchetana Bauri","alternateName":"Suc
  "knowsAbout":["AI enablement","AI readiness assessment","AI workflow design","Change communication","Corporate communications","Internal communications","Employee engagement","Employer branding","Thought leadership","Content strategy","Digital marketing","UX design"],
  "sameAs":["https://www.linkedin.com/in/suchetanabauri","https://x.com/suchetana_bauri","https://www.instagram.com/suchetanabauri.co/","https://medium.com/@suchetana.bauri","https://github.com/suchetna"]}
 ref={"@id":PID,"@type":"Person","name":"Suchetana Bauri","url":S+"/"}
-website={"@type":"WebSite","@id":WID,"url":S+"/","name":"Suchetana Bauri","inLanguage":"en","publisher":{"@id":PID}}
+org={"@type":"Organization","@id":S+"/#organization","name":"Suchetana Bauri","url":S+"/","logo":{"@type":"ImageObject","url":S+"/assets/img/logo.png","width":512,"height":512},
+ "email":"hello@suchetanabauri.com","founder":{"@id":PID},"address":person["address"],
+ "contactPoint":{"@type":"ContactPoint","contactType":"enquiries","email":"hello@suchetanabauri.com","url":S+"/lets-talk/","availableLanguage":["English"]},
+ "sameAs":person["sameAs"]}
+website={"@type":"WebSite","@id":WID,"url":S+"/","name":"Suchetana Bauri","inLanguage":"en","publisher":{"@id":S+"/#organization"}}
 SVN={'ai-enablement':'AI Enablement','branding':'Branding','communications':'Communications','design':'Design','digital-marketing':'Digital Marketing','thought-leadership':'Thought Leadership'}
 def services():
     out=[]
@@ -72,6 +76,7 @@ for p in glob.glob('**/index.html',recursive=True):
             a=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',a)).strip()
             if q.strip() and a: qa.append({"@type":"Question","name":html.unescape(q.strip()),"acceptedAnswer":{"@type":"Answer","text":html.unescape(a)}})
         if qa: g.append({"@type":"FAQPage","@id":(url or S+"/")+"#faq","mainEntity":qa,"isPartOf":{"@id":WID}})
+    g.append(org)
     g=[{k:v for k,v in n.items() if v} for n in g]
     blk='<script type="application/ld+json" id="ld">'+json.dumps(graph(g),ensure_ascii=False,separators=(',',':'))+'</script>'
     s=s.replace('</head>',blk+'\n</head>',1); open(p,'w',encoding='utf-8').write(s); done+=1
