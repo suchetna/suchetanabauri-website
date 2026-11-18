@@ -117,6 +117,10 @@ Summary: Usage figures show people are using AI. Before the 2027 investment roun
 URL: https://suchetanabauri.com/blog/ai-agents-exception-queue/
 Summary: In 2026, enterprises are moving beyond AI that answers questions towards systems that investigate, recommend and act. The opportunity for 2027 is to resolve the work that keeps getting stuck.
 
+## Your AI campaign won the click. Did it lose the customer?
+URL: https://suchetanabauri.com/blog/ai-campaign-won-the-click/
+Summary: AI-generated ads can win the click and still lose the customer. What the 2026 evidence says about attention, disclosure and trust in synthetic advertising.
+
 ## Your AI strategy is quietly rewriting the rules of work
 URL: https://suchetanabauri.com/blog/ai-strategy-rules-of-work/
 Summary: When AI enters performance reviews, hiring decisions and everyday expectations, a leadership message becomes something more consequential. Before 2027, organisations need to explain the bargain they are asking employees to accept.

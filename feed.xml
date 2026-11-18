@@ -6,7 +6,17 @@
   <atom:link href="https://suchetanabauri.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Writing on AI enablement, communication and design by Suchetana Bauri.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 17 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <item>
+    <title>Your AI campaign won the click. Did it lose the customer?</title>
+    <link>https://suchetanabauri.com/blog/ai-campaign-won-the-click/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/ai-campaign-won-the-click/</guid>
+    <pubDate>Wed, 18 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>AI-first Marketing</category>
+    <description>AI-generated ads can win the click and still lose the customer. What the 2026 evidence says about attention, disclosure and trust in synthetic advertising.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-ai-click.webp" type="image/webp" length="0"/>
+  </item>
   <item>
     <title>Before the next AI announcement, answer the question</title>
     <link>https://suchetanabauri.com/blog/before-the-next-ai-announcement/</link>
