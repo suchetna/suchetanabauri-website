@@ -149,6 +149,10 @@ Summary: The foundational UI/UX thinkers who shape how I approach design, commun
 URL: https://suchetanabauri.com/blog/openpencil-review/
 Summary: I tested OpenPencil on my own design file. An AI agent cleared the contrast findings in seconds, and left the design-system decision behind them on my desk.
 
+## In an AI-saturated market, proof is part of the brand
+URL: https://suchetanabauri.com/blog/proof-is-part-of-the-brand/
+Summary: Why proof now belongs inside the brand: what changed in 2026, four examples, a claims-and-proof register, and what to test in 2027.
+
 ## Before you change the logo, find out what people think you do
 URL: https://suchetanabauri.com/blog/rebrand-what-people-think-you-do/
 Summary: A rebrand should close the distance between what a business has become and what people understand it to be. That requires decisions about the business itself.
