@@ -1052,3 +1052,13 @@ html[data-theme=dark] #top.sbh .dl-form .dl-err{color:#F2B8B5}
 #top.sbh .dl-open .dl-tabs li b{color:var(--ink);font-weight:600}
 #top.sbh .dl-open .dl-k{display:block;line-height:1.5}
 #top.sbh .dl-open .dl-txt .btn{display:inline-flex;height:auto;min-height:48px;white-space:normal;text-align:center;line-height:1.3;padding:13px 24px;max-width:100%}
+
+/* Quieter type: plain emphasis instead of italic serif, sentence-case labels (Nov 2026) */
+#top.sbh em,#top.sbh .it{font-family:inherit;font-style:italic;font-weight:inherit;letter-spacing:inherit;font-size:inherit;line-height:inherit}
+#top.sbh :is(h1,h2,h3,h4,.h2,.ar-h1,.quote) em{font-style:normal;color:var(--body)}
+#top.sbh em.serif-em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;font-size:1.1em;line-height:1;color:inherit}
+#top.sbh :is(.sv-lab,.ar-table th,.ar-notes h2,.cs-facts dt,.ar-sheet .ws-k,.cs-related h2,.sv-glance h2,.dl-box .dl-k,.ar-tree .t-kick,.ar-tree .t-yes,.ar-tree .t-arrow span,.ar-tree .t-k){text-transform:none;letter-spacing:0}
+#top.sbh .ar-table.ar-table-wrap td[data-label]::before{text-transform:none;letter-spacing:0}
+#top.sbh :is(.ar-notes h2,.cs-related h2,.sv-glance h2){font-size:15px}
+#top.sbh :is(.ar-tree,.ar-sheet,.dl-box,.ar-cta,.cs-related,.sv-glance) :is(h2,h3,h4,p,figcaption,span,strong) em{font-style:normal;color:var(--body)}
+#top.sbh :is(.ar-sheet .ws-foot p,.ar-tree .t-close){font-family:inherit;font-style:normal;font-weight:500;letter-spacing:-.01em}
