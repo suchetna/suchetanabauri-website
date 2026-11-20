@@ -64,22 +64,34 @@
     window.addEventListener('scroll',tick,{passive:true}); window.addEventListener('resize',tick); tick();
   }
 
-  // Result bars grow to their real length
+  // Result bars grow to their real length and the figures count up, each time the list scrolls into view
   var rows=root.querySelector('[data-bars]');
   if(rows){
-    var grow=function(){
+    var vals=[].map.call(rows.querySelectorAll('.row .val'),function(v){var m=v.textContent.match(/^([^0-9]*)([0-9.]+)(.*)$/);return {el:v,pre:m?m[1]:'',n:m?parseFloat(m[2]):0,dec:m&&m[2].indexOf('.')>-1?1:0,post:m?m[3]:'',txt:v.textContent};});
+    var raf=null;
+    var setBars=function(on){
       rows.querySelectorAll('.row').forEach(function(row){
         var bar=row.querySelector('.bar'); if(!bar) return;
-        var w=parseFloat(bar.getAttribute('data-w'));
+        var w=on?parseFloat(bar.getAttribute('data-w')):12;
         bar.style.width=w+'%';
         row.querySelector('.val').style.left='calc('+w+'% - 8px)';
       });
     };
-    rows.querySelectorAll('.row .bar').forEach(function(b){var v=b.parentNode.querySelector('.val');v.style.left='calc(40% - 8px)';b.style.width='40%';});
+    var count=function(){
+      var t0=performance.now(),D=1400;
+      cancelAnimationFrame(raf);
+      (function step(now){var k=Math.min(1,(now-t0)/D),e=1-Math.pow(1-k,3);
+        vals.forEach(function(v){v.el.textContent=k<1?v.pre+(v.n*e).toFixed(v.dec)+v.post:v.txt;});
+        if(k<1) raf=requestAnimationFrame(step);})(t0);
+    };
     if('IntersectionObserver' in window && !reduce){
-      var io2=new IntersectionObserver(function(es){if(es[0].isIntersecting){grow();io2.disconnect();}},{threshold:.3});
+      setBars(false);
+      var io2=new IntersectionObserver(function(es){
+        if(es[0].isIntersecting){setBars(true);count();}
+        else if(es[0].boundingClientRect.top>0||es[0].boundingClientRect.bottom<0){cancelAnimationFrame(raf);setBars(false);vals.forEach(function(v){v.el.textContent=v.txt;});}
+      },{threshold:.3});
       io2.observe(rows);
-    } else grow();
+    } else setBars(true);
   }
   // Blog topic filter
   var tb=root.querySelector('.bl-topics'), cards=root.querySelectorAll('[data-posts] .bl-card');
