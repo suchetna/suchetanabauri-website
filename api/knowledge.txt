@@ -165,6 +165,10 @@ Summary: How moving from prompts to context, bounded agents and connected workfl
 URL: https://suchetanabauri.com/blog/thought-leadership-not-a-writing-problem/
 Summary: What translating research at ISB, specialist knowledge at ELMS and internal communication at Microsoft (via partner) taught me about turning expertise into something people can use.
 
+## Your website has a second audience: software acting for customers
+URL: https://suchetanabauri.com/blog/website-second-audience/
+Summary: AI assistants now read and act on websites for customers. How to design for that second audience without losing the first: clear terms, stopping points and an audit you can run.
+
 # Contact
 
 Email: hello@suchetanabauri.com
