@@ -18,6 +18,7 @@ Contact: hello@suchetanabauri.com or the contact form at https://suchetanabauri.
 - [Thought Leadership](https://suchetanabauri.com/services/thought-leadership/): Turning leaders’ expertise into articles and posts people want to read: editorial strategy, interviews, ghostwriting, opinion pieces, LinkedIn posts and newsletters.
 
 ## Writing
+- [Your AI prototype works. Who will keep it working in 2027?](https://suchetanabauri.com/blog/ai-prototype-who-keeps-it-working/): Small businesses can now build their own software with AI. Before depending on it, decide who owns it, what happens when it fails and whether it saves more work than it creates.
 - [Your website has a second audience: software acting for customers](https://suchetanabauri.com/blog/website-second-audience/): AI assistants now read and act on websites for customers. How to design for that second audience without losing the first: clear terms, stopping points and an audit you can run.
 - [In an AI-saturated market, proof is part of the brand](https://suchetanabauri.com/blog/proof-is-part-of-the-brand/): Why proof now belongs inside the brand: what changed in 2026, four examples, a claims-and-proof register, and what to test in 2027.
 - [Your AI campaign won the click. Did it lose the customer?](https://suchetanabauri.com/blog/ai-campaign-won-the-click/): AI-generated ads can win the click and still lose the customer. What the 2026 evidence says about attention, disclosure and trust in synthetic advertising.

@@ -121,6 +121,10 @@ Summary: In 2026, enterprises are moving beyond AI that answers questions toward
 URL: https://suchetanabauri.com/blog/ai-campaign-won-the-click/
 Summary: AI-generated ads can win the click and still lose the customer. What the 2026 evidence says about attention, disclosure and trust in synthetic advertising.
 
+## Your AI prototype works. Who will keep it working in 2027?
+URL: https://suchetanabauri.com/blog/ai-prototype-who-keeps-it-working/
+Summary: Small businesses can now build their own software with AI. Before depending on it, decide who owns it, what happens when it fails and whether it saves more work than it creates.
+
 ## Your AI strategy is quietly rewriting the rules of work
 URL: https://suchetanabauri.com/blog/ai-strategy-rules-of-work/
 Summary: When AI enters performance reviews, hiring decisions and everyday expectations, a leadership message becomes something more consequential. Before 2027, organisations need to explain the bargain they are asking employees to accept.

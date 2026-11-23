@@ -6,7 +6,17 @@
   <atom:link href="https://suchetanabauri.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Writing on AI enablement, communication and design by Suchetana Bauri.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 20 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <lastBuildDate>Mon, 23 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <item>
+    <title>Your AI prototype works. Who will keep it working in 2027?</title>
+    <link>https://suchetanabauri.com/blog/ai-prototype-who-keeps-it-working/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/ai-prototype-who-keeps-it-working/</guid>
+    <pubDate>Mon, 23 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>App Design</category>
+    <description>Small businesses can now build their own software with AI. Before depending on it, decide who owns it, what happens when it fails and whether it saves more work than it creates.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-prototype-2027.webp" type="image/webp" length="0"/>
+  </item>
   <item>
     <title>Your website has a second audience: software acting for customers</title>
     <link>https://suchetanabauri.com/blog/website-second-audience/</link>
