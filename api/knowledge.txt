@@ -141,6 +141,10 @@ Summary: As organisations prepare their 2027 AI plans, employees are still tryin
 URL: https://suchetanabauri.com/blog/brand-strategy-2027/
 Summary: AI can help a brand produce, personalise and appear everywhere. The harder task is remaining worth choosing. What the 2026 evidence suggests brands should prepare for next year.
 
+## The coordination tax: why faster tasks do not always make faster organisations
+URL: https://suchetanabauri.com/blog/coordination-tax/
+Summary: AI can shorten the step, but most of the delay sits between the steps. Dickens, Adam Smith, the dynamo and 2026 data on where work waits, with a free handoff and delay-mapping workbook.
+
 ## From digital marketing to AI-first: beyond faster content
 URL: https://suchetanabauri.com/blog/digital-marketing-to-ai-first/
 Summary: What I learned from AI marketing pioneers, and why the real improvement came from redesigning the work, not collecting more tools.
