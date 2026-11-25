@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Human in the loop is not an approval policy | Suchetana Bauri</title>
+<meta name="author" content="Suchetana Bauri">
+<meta name="description" content="An approval button records a decision; it does not prove anyone understood it. How to decide which agent actions need judgement, what reviewers must check, and whether the check works.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png"><link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png"><link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="canonical" href="https://suchetanabauri.com/blog/human-in-the-loop-approval-policy/">
+<link rel="alternate" type="application/rss+xml" title="Suchetana Bauri — Blog" href="https://suchetanabauri.com/feed.xml">
+<meta property="og:type" content="website"><meta property="og:title" content="Human in the loop is not an approval policy | Suchetana Bauri"><meta property="og:description" content="An approval button records a decision; it does not prove anyone understood it. How to decide which agent actions need judgement, what reviewers must check, and whether the check works."><meta property="og:url" content="https://suchetanabauri.com/blog/human-in-the-loop-approval-policy/"><meta property="og:image" content="https://suchetanabauri.com/assets/img/blog-human-in-the-loop.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#EBEBEB" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#141414" media="(prefers-color-scheme: dark)">
+<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})()</script>
+<meta name="google-site-verification" content="WV6-xvUFMF50nH9_xLun80A2w2cWrrRGokB3_PTwkF4" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBTKCFEKQT"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MBTKCFEKQT');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css?v=102">
+<link rel="stylesheet" href="/assets/css/chat.css?v=3">
+<script type="application/ld+json" id="ld">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://suchetanabauri.com/blog/human-in-the-loop-approval-policy/#article","headline":"Human in the loop is not an approval policy","description":"An approval button records a decision; it does not prove anyone understood it. How to decide which agent actions need judgement, what reviewers must check, and whether the check works.","url":"https://suchetanabauri.com/blog/human-in-the-loop-approval-policy/","mainEntityOfPage":"https://suchetanabauri.com/blog/human-in-the-loop-approval-policy/","image":"https://suchetanabauri.com/assets/img/blog-human-in-the-loop.webp","datePublished":"2026-11-25","dateModified":"2026-11-25","author":{"@id":"https://suchetanabauri.com/#person","@type":"Person","name":"Suchetana Bauri","url":"https://suchetanabauri.com/"},"publisher":{"@id":"https://suchetanabauri.com/#person","@type":"Person","name":"Suchetana Bauri","url":"https://suchetanabauri.com/"},"inLanguage":"en","isPartOf":{"@id":"https://suchetanabauri.com/blog/#blog"},"articleSection":"Agentic AI","timeRequired":"PT12M"},{"@type":"Organization","@id":"https://suchetanabauri.com/#organization","name":"Suchetana Bauri","url":"https://suchetanabauri.com/","logo":{"@type":"ImageObject","url":"https://suchetanabauri.com/assets/img/logo.png","width":512,"height":512},"email":"hello@suchetanabauri.com","founder":{"@id":"https://suchetanabauri.com/#person"},"address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"},"contactPoint":{"@type":"ContactPoint","contactType":"enquiries","email":"hello@suchetanabauri.com","url":"https://suchetanabauri.com/lets-talk/","availableLanguage":["English"]},"sameAs":["https://www.linkedin.com/in/suchetanabauri","https://x.com/suchetana_bauri","https://www.instagram.com/suchetanabauri.co/","https://medium.com/@suchetana.bauri","https://github.com/suchetna"]}]}</script>
+</head>
+<body>
+<div class="sbh ar-page" id="top">
+<div class="ar-progress" aria-hidden="true"><span></span></div>
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a class="logo" href="/" aria-label="Suchetana Bauri, home">সুচেতনা</a>
+  <nav aria-label="Main"><ul><li><a href="/work/">Work</a></li><li><a href="/services/">Services</a></li><li><a href="/blog/">Blog</a></li><li><a href="/about/">About</a></li></ul></nav>
+  <div class="nav-r">
+    <button class="theme-t" type="button" aria-label="Switch to dark mode" data-theme-toggle><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <a class="btn" href="/lets-talk/">Contact</a>
+    <button class="menu-t" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-toggle><span></span><span></span></button>
+  </div>
+  <nav class="m-menu" id="m-menu" aria-label="Menu" hidden><ul><li><a href="/">Home</a></li><li><a href="/work/">Work</a></li><li><a href="/blog/">Blog</a></li><li><a href="/about/">About</a></li><li><a href="/services/">Services</a></li></ul></nav>
+</header>
+
+<main id="main">
+
+
+<article class="ar">
+  <header class="ar-head wrap">
+    <a class="sv-crumb" href="/blog/">Blog</a>
+    <span class="tag">Agentic AI</span>
+    <h1 class="ar-h1">Human in the loop is not an approval policy</h1>
+    <p class="ar-stand">AI agents do not become well governed because somebody clicks ‘approve’. Organisations need to decide which actions require judgement, what the reviewer must check and whether the check actually works.</p>
+    <p class="ar-meta"><span>Suchetana Bauri</span><span><time datetime="2026-11-25">25 November 2026</time></span><span>12 min read</span></p>
+  </header>
+  <figure class="ar-hero wrap"><img src="/assets/img/blog-human-in-the-loop.webp" alt="A large approve button with a small figure beside it, and a ladder of four rungs leading away from it" width="1880" height="1200"></figure>
+  <div class="ar-body">
+    <p>I find the approval button reassuring. It suggests that, somewhere between a machine’s proposal and its consequences, a person is paying attention.</p>
+    <p>The button makes no such promise. It records a decision. Whether anyone understood that decision is another matter.</p>
+    <p>In August, Anthropic reported that users accepted 97% of permission prompts in Claude Code, its coding agent. That figure does not, by itself, establish carelessness: most requests may have concerned perfectly sensible, routine commands. But it leaves an awkward question unanswered. How reliably could people distinguish the ordinary request from the dangerous one?<sup><a href="#note-1">1</a></sup></p>
+    <p>The company tested this with 1,053 paid professional testers. During coding sessions in a test environment, each participant encountered a permission prompt into which researchers had substituted a clearly dangerous command. Approving it caused no actual harm. Human reviewers caught 13.6% of these commands; Anthropic’s automated checking system blocked 89%. The human detection rate fell from about 17% early in a session to about 5% after at least 50 previous prompts.<sup><a href="#note-1">1</a></sup></p>
+    <p>These are vendor-reported findings from a controlled coding study, not an independent audit of enterprise decision-making. Anthropic also sells the automated alternative. Both qualifications belong beside the numbers, not behind the furniture.</p>
+    <p>Still, the experiment exposes a weakness in a familiar assurance: “Don’t worry. We have a human in the loop.”</p>
+    <p>That tells us where someone sits. It does not tell us what they can see, what they must decide, whether they have time to decide it or what happens when they refuse.</p>
+    <p>Those are the beginnings of an approval policy.</p>
+    <h2>Presence is not control</h2>
+    <p>The distinction matters because an AI agent can do more than produce something for a person to read. Connected to tools and business systems, it can update records, send messages or initiate transactions. Its usefulness depends partly on the authority someone gives it. So does its capacity to cause trouble.<sup><a href="#note-2">2</a></sup></p>
+    <p>Consider an illustrative customer-service workflow.</p>
+    <p>An agent reads a complaint, checks an order, consults a refund policy, recommends compensation and prepares a response. A manager receives a request: “Approve resolution?”</p>
+    <p>What, exactly, is being approved?</p>
+    <p>The interpretation of the policy? The amount? The customer’s eligibility? The destination account? The wording of the message? All five?</p>
+    <p>A single button can conceal several decisions. Unless someone separates them, a reviewer may check the prose while assuming that the transaction has already been validated.</p>
+    <p>An approval policy should therefore answer some unglamorous questions:</p>
+    <ul class="ar-list"><li>Which exact action requires permission?</li><li>Who has the authority and expertise to grant it?</li><li>What evidence must they inspect?</li><li>Does approval cover one action or a sequence?</li><li>What happens after rejection, delay or silence?</li><li>How will the organisation know whether the review caught anything?</li></ul>
+    <p>An agent needs an accountable owner, limited permissions and a practical means of intervention. The next step is to specify the decision that intervention is supposed to improve.</p>
+    <p>“Human oversight” is a useful heading. It is not yet an operating instruction.</p>
+    <h2>The human is also part of the system being tested</h2>
+    <p>There is a tempting explanation for weak oversight: people become complacent around machines.</p>
+    <p>Sometimes they may. But “be more vigilant” is an incomplete response to a workflow that asks someone to make hundreds of repetitive judgements while doing another job.</p>
+    <p>The Anthropic experiment suggests that the volume of approval requests matters. Catching a dangerous command became less likely later in the session. It does not establish a universal limit on human attention, but it gives organisations a reason to treat review capacity as something finite rather than an inexhaustible safety resource.<sup><a href="#note-1">1</a></sup></p>
+    <p>Singapore’s Model AI Governance Framework for Agentic AI makes this explicit. It recognises that continuous human oversight becomes impractical at scale and recommends significant checkpoints, including for high-stakes or irreversible actions. It also calls for regular audits of whether human oversight remains effective.<sup><a href="#note-2">2</a></sup></p>
+    <p>That last recommendation changes the question.</p>
+    <p>Instead of asking whether a person reviewed the work, ask whether the review improved it.</p>
+    <p>The EU AI Act takes a similarly substantive approach for high-risk systems. Article 14 describes oversight in terms of people being able to understand relevant limitations, recognise over-reliance, interpret outputs, disregard or reverse them, and interrupt the system safely. These provisions concern high-risk AI systems, not every workplace assistant. But the distinction is useful more broadly: control requires an ability to act, not merely a place on a diagram.<sup><a href="#note-3">3</a></sup></p>
+    <p>A reviewer who cannot inspect the evidence or halt the action is not much of a safeguard. They may, however, be easy to locate after an incident.</p>
+    <p>That is not the same organisational achievement.</p>
+    <h2>A second reviewer does not necessarily mean a better review</h2>
+    <p>One of the more revealing studies in the research concerns something apparently cosmetic: what an organisation calls its AI.</p>
+    <p>In a September working paper, Emma Wiles, Megan Hsu, Julie Bedard and Matthew Kropp examined how managers reviewed identical documents containing deliberate errors. Participants were told that the drafts came from an AI tool, an “AI employee” or a human employee. The final experimental analysis included 813 HR and finance managers, who had 20 minutes to review five documents.<sup><a href="#note-4">4</a></sup></p>
+    <p>Across the full sample, the researchers found no statistically significant effect on review performance. That is important: this is not evidence that calling AI an employee generally makes managers worse at checking its work.</p>
+    <p>The more striking findings appeared among managers whose organisations already placed AI agents on organisational or workflow charts.</p>
+    <p>Within that subgroup, presenting the drafter as an AI employee rather than an AI tool reduced the share of errors detected by 17%. Requests for additional review rose by 22 percentage points. Managers also assigned less accountability to themselves and more to the AI system.<sup><a href="#note-4">4</a></sup></p>
+    <p>The qualifications are substantial. This is an unreviewed working paper, not a live deployment study. The organisational-chart subgroup was not the primary moderator specified in the pre-analysis plan. Nor did the researchers observe the requested second reviews, so they could not determine whether those reviews compensated for weaker first-pass checking.<sup><a href="#note-4">4</a></sup></p>
+    <p>The finding is nevertheless useful as a design question.</p>
+    <p>When an approval chain grows, does verification improve, or does each participant become more comfortable assuming that somebody else will check?</p>
+    <p>Those possibilities can look remarkably similar in a process map.</p>
+    <p>The researchers describe a “hot potato” effect: responsibility moves along the chain while direct checking weakens. That interpretation should remain provisional. But it points towards a practical requirement: every review stage needs a defined purpose.<sup><a href="#note-4">4</a></sup></p>
+    <p>A finance specialist might verify eligibility and amount. A budget owner might authorise expenditure. A technical control might confirm the destination account. Asking all three to “review and approve” is less precise than naming their separate jobs.</p>
+    <p>Adding signatures is easy. Adding independent scrutiny takes more thought.</p>
+    <h2>Approval is only one kind of supervision</h2>
+    <p>The alternative is not to remove people and hope for the best.</p>
+    <p>It is to distinguish the different things people do when supervising an agent.</p>
+    <p>They may authorise an action before it happens. They may interrupt work already under way. They may clarify an ambiguous request. Or they may inspect the result afterwards.</p>
+    <p>These are different controls, and counting them together produces an attractive but unhelpful total.</p>
+    <p>Anthropic’s February research on agent autonomy illustrates the distinction. Newer Claude Code users employed full auto-approval in roughly 20% of sessions; that increased to more than 40% among users with around 750 sessions. Yet experienced users also interrupted more often: approximately 9% of turns, compared with about 5% among newer users.<sup><a href="#note-5">5</a></sup></p>
+    <p>More independence did not simply coincide with less involvement. The pattern was consistent with a shift towards letting the agent work and intervening selectively.</p>
+    <p>It does not prove that this approach is safer. Experienced users may attempt different tasks, and coding is unusually amenable to testing and comparison. Anthropic cautions against assuming that its findings transfer to other domains.<sup><a href="#note-5">5</a></sup></p>
+    <p>Even so, the research complicates the assumption that more permission prompts necessarily mean more oversight.</p>
+    <p>Agents also stopped to consult users. In Anthropic’s classification, only 11% of agent-initiated stops concerned approval or confirmation. More often, the agent presented a choice between approaches, sought diagnostic information or clarified an incomplete request. These categories were generated using Claude, so the percentages are indicative rather than definitive.<sup><a href="#note-5">5</a></sup></p>
+    <p>For approval design, the implication is straightforward: a useful question can prevent an unsuitable action before there is anything to approve.</p>
+    <p>A system that asks, “Which customer account do you mean?” may be exercising a more valuable restraint than one that confidently prepares the wrong transaction and politely requests a signature.</p>
+    <h2>Give actions permission, not agents a promotion</h2>
+    <p>“More autonomous” is often presented as the natural destination of a capable AI system.</p>
+    <p>For an organisation, it is more useful to treat autonomy as a set of permissions attached to particular actions.</p>
+    <p>Singapore’s framework distinguishes the range of actions an agent can take from the independence with which it decides how to take them. An agent with broad access but frequent approval gates is different from one that acts independently inside a very narrow boundary.<sup><a href="#note-2">2</a></sup></p>
+    <p>That distinction gets lost when a team describes an entire agent as “supervised” or “fully autonomous”.</p>
+    <p>Our illustrative refund agent might be permitted to retrieve order information independently, prepare a recommendation for review, issue narrowly defined low-value refunds within limits, and never alter payment details.</p>
+    <p>One agent. Several arrangements.</p>
+    <p>The following ladder is a practical synthesis, not a validated research framework. It translates the evidence into a way of discussing permissions. The rungs are options, not a maturity contest.</p>
+    <h3>0. Suggest</h3>
+    <p>The system drafts or recommends. A person decides and performs the consequential action.</p>
+    <p>This is a sensible starting point when the task is unfamiliar, judgement-heavy or difficult to evaluate. Keeping execution outside the agent’s permissions creates a clear boundary.</p>
+    <p>It does not make the recommendation harmless. A persuasive but mistaken suggestion can still influence a person. The human’s job is to evaluate it, not merely transmit it.</p>
+    <h3>1. Prepare, then seek approval</h3>
+    <p>The agent prepares an exact action but cannot execute it without authorisation.</p>
+    <p>The reviewer should see the proposed action, relevant evidence, affected records, consequences and any uncertainty. For actions requiring permission, silence should not become consent.</p>
+    <p>Approval should attach to what was actually inspected. If the amount, recipient or scope changes, the earlier decision should no longer authorise execution.</p>
+    <p>This is where a general instruction to “approve the plan” needs particular care. A plan is not an unlimited licence for whatever implementation later seems convenient.</p>
+    <h3>2. Act within written limits</h3>
+    <p>The agent can proceed inside an explicitly defined boundary.</p>
+    <p>For a refund workflow, that boundary might specify eligible products, a maximum transaction value, a cumulative limit, permitted accounts, exclusions and an expiry date. Anything outside it goes to a person.</p>
+    <p>The important distinction is between a rule described to the model and a restriction enforced by the surrounding system. Singapore’s framework recommends system-level enforcement of human approval where possible, rather than relying on prompt-layer instructions that can be bypassed or forgotten.<sup><a href="#note-2">2</a></sup></p>
+    <p>“Please do not exceed the limit” is guidance. A payment service that refuses the transaction is a control.</p>
+    <h3>3. Act, then review</h3>
+    <p>The agent acts, and people inspect selected results afterwards.</p>
+    <p>I would reserve this arrangement for work where errors can be detected and corrected before unacceptable harm occurs. The review needs a sampling method, escalation rules and tested recovery procedures.</p>
+    <p>Reversibility deserves scrutiny. Restoring a database field does not necessarily undo everything that happened after it changed.</p>
+    <p>Nor does recalling an email reliably restore the recipient’s previous state of knowledge. Unfortunately, people do not come with version history.</p>
+    <h3>4. Act and report</h3>
+    <p>For narrowly scoped, low-risk work with demonstrated performance, the agent acts without routine advance approval and reports what happened.</p>
+    <p>An owner still monitors outcomes, investigates exceptions and retains the ability to stop it. This is not the disappearance of governance. It is a decision to put more of the control into boundaries, monitoring and recovery.</p>
+    <p>Some actions should never reach this rung. Others may not need an AI agent at all.</p>
+    <p>A fixed rule can be an excellent technology when the work requires a fixed rule.</p>
+    <h2>Write down what earns greater freedom — and what removes it</h2>
+    <p>A ladder becomes useful only when someone specifies how permissions change.</p>
+    <p>Before deployment, I would want a short record for each consequential action: its current permission level, named owner, operating limits, required evidence and stopping conditions.</p>
+    <p>The business owner need not personally inspect every transaction. But somebody with authority must decide which risks the organisation accepts, rather than leaving frontline reviewers to infer the answer from a queue.</p>
+    <p>This is where accountability becomes operational. Ownership follows decisions: whether to deploy, which data to use, how much reliance to permit and when to stop.</p>
+    <p>Greater freedom should require evidence from the task in question. A system that performs well on ordinary cases has not necessarily demonstrated that it can recognise exceptions.</p>
+    <p>Permissions should also contract under predefined conditions. Examples might include a serious incident, repeated policy breaches, deteriorating outcomes or a material change to the model, tools or connected systems. Singapore’s framework treats monitoring and reassessment as an iterative process, not a final check performed at launch.<sup><a href="#note-2">2</a></sup></p>
+    <p>The same applies to human capacity.</p>
+    <p>If a new agent doubles the approval queue without changing staffing or the work expected of each reviewer, that should trigger a review of the control design.</p>
+    <p>The organisation has changed the conditions under which its safeguard operates. It should not assume the safeguard remains equally effective.</p>
+    <h2>Measure the check, then inspect the consequence</h2>
+    <p>An approval log proves that an approval occurred. It does not establish that the underlying decision was sound.</p>
+    <p>The most useful measures therefore combine reviewer behaviour with downstream outcomes. Singapore’s updated framework specifically identifies human override rates and response times as possible indicators of automation bias. Neither measure should be interpreted alone.<sup><a href="#note-2">2</a></sup></p>
+    <p>A practical starting set would include:</p>
+    <ul class="ar-list"><li>Approval, rejection and modification rates, separated by action type.</li><li>Review time, interpreted alongside complexity and the evidence available.</li><li>Requests per reviewer, including surges and backlogs.</li><li>Errors that passed approval and were discovered later.</li><li>Detection rates for known-bad proposals introduced in safe tests.</li><li>Whether additional review improves final accuracy.</li><li>The time and practical steps required to stop or recover from an error.</li></ul>
+    <p>These are diagnostic measures, not universal thresholds. A high approval rate may reflect accurate proposals. A low override rate may reflect a tightly bounded task. A fast decision may be entirely appropriate for something simple.</p>
+    <p>The point is to investigate patterns, not reward a preferred percentage.</p>
+    <p>Tests should also inspect what the agent changed, not merely how convincingly it explained itself.</p>
+    <p>The 2024 τ-bench research offers a useful method. Its agents handled simulated customer conversations using tools and company policies. Researchers evaluated success by comparing the final database state with the intended result, and tested reliability across repeated attempts.<sup><a href="#note-6">6</a></sup></p>
+    <p>Its historical model scores should not be presented as a verdict on today’s systems. The enduring contribution is the test design.</p>
+    <p>For a refund agent, inspect which account received the money, how much arrived and whether the action complied with policy. Repeat the scenario. Include exceptions.</p>
+    <p>An eloquent explanation is not a receipt.</p>
+    <h2>Make refusal a usable part of the workflow</h2>
+    <p>There is one final piece that does not fit neatly into a permissions table: what the organisation communicates about responsibility.</p>
+    <p>A person cannot exercise meaningful judgement if the practical message is “approve quickly, but be accountable if anything goes wrong”.</p>
+    <p>I would make the reviewer’s mandate explicit. What must they verify? What may they rely on? When should they stop the workflow? Where do uncertain cases go? Which failures belong to system design rather than individual conduct?</p>
+    <p>Training should use realistic mistakes, not only successful demonstrations. It should also preserve the expertise needed to challenge the system. Singapore’s framework explicitly connects responsible use with maintaining employees’ tradecraft and foundational skills.<sup><a href="#note-2">2</a></sup></p>
+    <p>The time spent checking belongs in the business case, too. As I argued in <a href="/blog/ai-adoption-dashboard-green/">my article on AI adoption dashboards</a>, production speed is only part of the result once verification, correction and approval enter the calculation.</p>
+    <p>None of this requires an argument against AI autonomy. It requires an argument for choosing it deliberately.</p>
+    <p>The useful question is not whether a human remains somewhere in the process. It is what that person contributes, whether they can contribute it under real working conditions, and what evidence shows that their involvement matters.</p>
+    <p>Before adding another approval box, try a modest test: put a known-bad proposal through a safe version of the workflow and see what happens.</p>
+    <p>Does somebody notice? Can they explain the problem? Does their refusal stop the action?</p>
+    <p>If not, the organisation has not yet built the control it describes.</p>
+    <p>It has built the button.</p>
+    <section class="ar-notes" aria-label="Sources"><h2>Sources</h2><ol><li id="note-1">Anthropic, <a href="https://claude.com/resources/articles/auto-mode-default-in-claude-code" target="_blank" rel="noopener">Auto mode is now the default in Claude Code</a>, August 2026. Vendor-run controlled study of 1,053 paid testers in a test environment; Anthropic also sells the automated alternative.</li><li id="note-2">Infocomm Media Development Authority (Singapore), <a href="https://www.imda.gov.sg/assets/63438074-73f6-4dcc-a281-030f42642cf4.pdf" target="_blank" rel="noopener">Model AI Governance Framework for Agentic AI</a>, version 1.5, 20 May 2026 (first published January 2026).</li><li id="note-3">European Union, <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14" target="_blank" rel="noopener">AI Act, Article 14: Human oversight</a>. Applies to high-risk AI systems.</li><li id="note-4">Emma Wiles, Megan Hsu, Julie Bedard and Matthew Kropp, <a href="https://www.emmawiles.com/storage/ai_employee.pdf" target="_blank" rel="noopener">Putting AI on the Org Chart: Evidence on Delegation and Accountability</a>, working paper, 2026. Not peer reviewed; the org-chart subgroup was not the primary pre-specified moderator.</li><li id="note-5">Anthropic, <a href="https://www.anthropic.com/research/measuring-agent-autonomy" target="_blank" rel="noopener">Measuring AI agent autonomy in practice</a>, 18 February 2026. Mostly software-engineering data; stop reasons were classified using Claude.</li><li id="note-6">Shunyu Yao, Noah Shinn, Pedram Razavi and Karthik Narasimhan, <a href="https://arxiv.org/abs/2406.12045" target="_blank" rel="noopener">τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains</a>, 2024.</li></ol></section>
+  </div>
+  <aside class="ar-cta wrap"><div><span class="tag">Service</span><h2>Deploying AI agents? <em>Design the approvals before the button.</em></h2><p class="ar-cta-2">Ready to talk? <a href="/lets-talk/">Tell me what you’re working on</a>. I reply within two working days.</p></div><a class="btn sv-cta" href="/services/ai-enablement/">Explore AI Enablement <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M7 7h10v10" /> <path d="M7 17 17 7" /> </svg></a></aside>
+</article>
+<!-- ============ FOOTER ============ -->
+</main>
+
+<footer class="foot wrap">
+  <div class="fcols">
+    <div><h2 class="fh">Discover</h2><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="/lets-talk/">Contact</a></li></ul></div>
+    <div><h2 class="fh">Explore</h2><ul><li><a href="/work/">Work</a></li><li><a href="/services/">Services</a></li><li><a href="/blog/">Blog</a></li><li><a href="/ai-readiness/">AI Readiness Check</a></li></ul></div>
+    <div><h2 class="fh">Follow me</h2><ul><li><a href="https://www.linkedin.com/in/suchetanabauri" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://x.com/suchetana_bauri" target="_blank" rel="noopener">X</a></li><li><a href="https://www.instagram.com/suchetanabauri.co/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://medium.com/@suchetana.bauri" target="_blank" rel="noopener">Medium</a></li></ul></div>
+    <div><h2 class="fh">Let’s talk</h2><ul><li><a href="mailto:hello@suchetanabauri.com">Email</a></li><li><a href="https://wa.me/917675003859" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <span class="c">© 2026 Suchetana Bauri · <a href="/privacy-policy/">Privacy</a> · <a href="/terms-of-service/">Terms</a></span>
+    <a class="top" href="#top" aria-label="Back to top"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m18 15-6-6-6 6" /> </svg></a>
+    <span class="r">Designed in Figma</span>
+  </div>
+</footer>
+
+
+</div>
+
+<script src="/assets/js/site.js?v=98" defer></script>
+<script src="/assets/js/chat.js?v=2" defer></script>
+</body>
+</html>
