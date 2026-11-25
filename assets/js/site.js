@@ -441,7 +441,7 @@
 
 /* ---- Listen to article: recorded narration where available ---- */
 (function(){
-  var NARR={'coordination-tax':17,'ai-prototype-who-keeps-it-working':19,'website-second-audience':15,'proof-is-part-of-the-brand':15,'ai-campaign-won-the-click':14,'before-the-next-ai-announcement':18,'brand-strategy-2027':18,'digital-marketing-to-ai-first':20,'ai-agents-exception-queue':19,'ai-strategy-rules-of-work':18,'ai-strategy-what-is-your-business-for':18,'interface-owes-you-an-explanation':18,'rebrand-what-people-think-you-do':15,'redesigning-marketing-work-with-ai':19,'thought-leadership-not-a-writing-problem':18};
+  var NARR={'human-in-the-loop-approval-policy':19,'coordination-tax':17,'ai-prototype-who-keeps-it-working':19,'website-second-audience':15,'proof-is-part-of-the-brand':15,'ai-campaign-won-the-click':14,'before-the-next-ai-announcement':18,'brand-strategy-2027':18,'digital-marketing-to-ai-first':20,'ai-agents-exception-queue':19,'ai-strategy-rules-of-work':18,'ai-strategy-what-is-your-business-for':18,'interface-owes-you-an-explanation':18,'rebrand-what-people-think-you-do':15,'redesigning-marketing-work-with-ai':19,'thought-leadership-not-a-writing-problem':18};
   var m=location.pathname.match(/^\/blog\/([a-z0-9-]+)\/?$/),meta=document.querySelector('.ar-meta');
   if(!m||!NARR[m[1]]||!meta)return;
   var a=new Audio();a.preload='none';a.src='/assets/audio/'+m[1]+'.mp3';
