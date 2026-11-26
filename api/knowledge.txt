@@ -157,6 +157,10 @@ Summary: An approval button records a decision; it does not prove anyone underst
 URL: https://suchetanabauri.com/blog/interface-owes-you-an-explanation/
 Summary: The foundational UI/UX thinkers who shape how I approach design, communication and AI: Norman, Nielsen, Shneiderman, Krug, Garrett, Rosenfeld and Morville.
 
+## The most-clicked button in your company
+URL: https://suchetanabauri.com/blog/most-clicked-button/
+Summary: Multi-agent AI fails less from weak models than from weak organisation. A sceptical, affectionate look at approval buttons, org charts and the human bottleneck, and what to redesign in 2027.
+
 ## OpenPencil review: not another screen generator
 URL: https://suchetanabauri.com/blog/openpencil-review/
 Summary: I tested OpenPencil on my own design file. An AI agent cleared the contrast findings in seconds, and left the design-system decision behind them on my desk.

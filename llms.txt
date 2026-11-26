@@ -18,6 +18,7 @@ Contact: hello@suchetanabauri.com or the contact form at https://suchetanabauri.
 - [Thought Leadership](https://suchetanabauri.com/services/thought-leadership/): Turning leaders’ expertise into articles and posts people want to read: editorial strategy, interviews, ghostwriting, opinion pieces, LinkedIn posts and newsletters.
 
 ## Writing
+- [The most-clicked button in your company](https://suchetanabauri.com/blog/most-clicked-button/): Multi-agent AI fails less from weak models than from weak organisation. A sceptical, affectionate look at approval buttons, org charts and the human bottleneck, and what to redesign in 2027.
 - [Human in the loop is not an approval policy](https://suchetanabauri.com/blog/human-in-the-loop-approval-policy/): An approval button records a decision; it does not prove anyone understood it. How to decide which agent actions need judgement, what reviewers must check, and whether the check works.
 - [The coordination tax: why faster tasks do not always make faster organisations](https://suchetanabauri.com/blog/coordination-tax/): AI can shorten the step, but most of the delay sits between the steps. Dickens, Adam Smith, the dynamo and 2026 data on where work waits, with a free handoff and delay-mapping workbook.
 - [Your AI prototype works. Who will keep it working in 2027?](https://suchetanabauri.com/blog/ai-prototype-who-keeps-it-working/): Small businesses can now build their own software with AI. Before depending on it, decide who owns it, what happens when it fails and whether it saves more work than it creates.
