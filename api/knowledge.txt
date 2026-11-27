@@ -145,6 +145,10 @@ Summary: AI can help a brand produce, personalise and appear everywhere. The har
 URL: https://suchetanabauri.com/blog/coordination-tax/
 Summary: AI can shorten the step, but most of the delay sits between the steps. Dickens, Adam Smith, the dynamo and 2026 data on where work waits, with a free handoff and delay-mapping workbook.
 
+## 11,000 messages and an incomplete picture: what Microsoft and Nvidia reveal about crisis communication
+URL: https://suchetanabauri.com/blog/crisis-communication-microsoft-nvidia/
+Summary: Two very different crises show why organisations need more than a statement. They need a way to share what is known, listen to those affected and explain how decisions are made.
+
 ## From digital marketing to AI-first: beyond faster content
 URL: https://suchetanabauri.com/blog/digital-marketing-to-ai-first/
 Summary: What I learned from AI marketing pioneers, and why the real improvement came from redesigning the work, not collecting more tools.

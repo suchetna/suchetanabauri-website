@@ -6,7 +6,17 @@
   <atom:link href="https://suchetanabauri.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Writing on AI enablement, communication and design by Suchetana Bauri.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 26 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <lastBuildDate>Fri, 27 Nov 2026 09:00:00 +0530</lastBuildDate>
+  <item>
+    <title>11,000 messages and an incomplete picture: what Microsoft and Nvidia reveal about crisis communication</title>
+    <link>https://suchetanabauri.com/blog/crisis-communication-microsoft-nvidia/</link>
+    <guid isPermaLink="true">https://suchetanabauri.com/blog/crisis-communication-microsoft-nvidia/</guid>
+    <pubDate>Fri, 27 Nov 2026 09:00:00 +0530</pubDate>
+    <dc:creator>Suchetana Bauri</dc:creator>
+    <category>Crisis Communication</category>
+    <description>Two very different crises show why organisations need more than a statement. They need a way to share what is known, listen to those affected and explain how decisions are made.</description>
+    <enclosure url="https://suchetanabauri.com/assets/img/blog-crisis-communication.webp" type="image/webp" length="0"/>
+  </item>
   <item>
     <title>The most-clicked button in your company</title>
     <link>https://suchetanabauri.com/blog/most-clicked-button/</link>
